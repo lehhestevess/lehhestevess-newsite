@@ -21,7 +21,7 @@ ul{
 }
 
 .c{ 
-    text-align: center;
+    align-items: center;
     color: rgb(177, 0, 0);
     font-size: 50px;
   }
