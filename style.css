@@ -10,4 +10,10 @@ h1{color: rgb(212, 3, 3);
 ul{
     font-display: flex;
     justify-content: space-between;
+
+}
+
+img{
+ height: 0,90px;
+ width: 1,20px;
 }
