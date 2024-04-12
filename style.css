@@ -45,7 +45,7 @@ footer {
   justify-content: space-between;
 }
 .recommendation {
-  flex: 0 1 calc(25% - 9px); /* Espaço para duas colunas com 10px de espaçamento entre elas */
+  flex: 0 1 calc(50% - 10px); /* Espaço para duas colunas com 10px de espaçamento entre elas */
   margin-bottom: 20px;
 }
 .recommendation img {
@@ -61,7 +61,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .recommendation {
-    flex: 0 1 15%; /* Em dispositivos menores, ocupar toda a largura */
+    flex: 0 1 100%; /* Em dispositivos menores, ocupar toda a largura */
   }
 }
 
