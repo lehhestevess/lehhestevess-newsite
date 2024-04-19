@@ -8,9 +8,14 @@ body {
 header {
   background-color: #6b02026c;
   color: #ffffff;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
+  background-image: url('https://i.postimg.cc/zfbNxZ9p/batman.jpg');
+  background-position: center; /
+  background-repeat:no-repeat; 
+  background-size: cover; 
 }
+
 nav {
   background-color: #444;
   color: #ffffff;
@@ -67,7 +72,7 @@ footer {
 }
 
 body {
-  background-image: url('https://i.postimg.cc/Y0NGM625/fundo-atual.jpg'); 
+  background-image: url('https://i.postimg.cc/YSr5P4hp/6a8ea07b-58b4-4b87-b58b-09bd85b6a2bb.jpg'); 
   background-size: cover; 
   background-position: center; /
   background-repeat: no-repeat; /
@@ -84,7 +89,7 @@ img {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
   gap: 20px; 
   text-align: center;
 }
