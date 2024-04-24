@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+  <script>
+    let count = 0;
+    function incrementCount(){
+      count++;
+      document.getElementById("count-display").textContent = count;
+    }
+  </script>
+</head>
+<body>
+     <main>
+        <div class="container">
+            <button onclick="incrementCount()">Clique aqui</button>
+            <p>Total de Cliques: <span id="count-display">0</span> </p>
+            </div>
 
 <header>
   <h1>Recomendações</h1>
@@ -15,8 +30,9 @@
 
 <nav>
   <a href="#filmes">Filmes</a> 
-  <a href="#series">Séries</a>
+  <a href="#series">Séries</a> 
 </nav>
+
 
 <main>
   <section id="filmes">

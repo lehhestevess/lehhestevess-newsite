@@ -15,6 +15,9 @@ header {
   background-repeat:no-repeat; 
   background-size: cover; 
 }
+div button  {
+  align-items: right;
+}
 
 nav {
   background-color: #444;
@@ -95,3 +98,18 @@ img {
 }
 
 
+button {
+padding: 10px 20px;
+font-size: 16px;
+background-color: #550202;
+color: #f8f8f8;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.container {
+width: 100%;
+padding: 20px;
+box-sizing: border-box;
+text-align: right; 
+}
