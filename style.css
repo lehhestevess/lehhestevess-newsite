@@ -4,6 +4,12 @@ body {
   padding: 0;
   background-color: black;
   text-align: center;
+  background-image: url('https://i.postimg.cc/YSr5P4hp/6a8ea07b-58b4-4b87-b58b-09bd85b6a2bb.jpg'); 
+  background-size: cover; 
+  background-position: center; /
+  background-repeat: no-repeat; /
+  font-family: Arial, sans-serif; 
+
 }
 header {
   background-color: #6b02026c;
@@ -74,20 +80,11 @@ footer {
   }
 }
 
-body {
-  background-image: url('https://i.postimg.cc/YSr5P4hp/6a8ea07b-58b4-4b87-b58b-09bd85b6a2bb.jpg'); 
-  background-size: cover; 
-  background-position: center; /
-  background-repeat: no-repeat; /
-  font-family: Arial, sans-serif; 
-  margin: 0; 
-  padding: 0; 
-}
 
 img {
-  height:auto; 
+  height:300px;
+  width:300px; 
   text-align: center;
-  width:auto;
 }
 
 .container {
@@ -95,5 +92,23 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 20px; 
   text-align: center;
+}
+
+.a {
+  background-color: #bfa8f5;
+  padding: 20px;
+  text-align: center;
+  margin-left: 50px; 
+  margin-right: 50px;
+}
+
+.h{
+  margin-left: 100px; /* Define a margem esquerda */
+  margin-right:100px; /* Define a margem direita */
+ 
+}
+
+.text{
+  padding: 20px;
 }
 
