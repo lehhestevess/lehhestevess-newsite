@@ -10,17 +10,28 @@
   <style>
     /* Estilos CSS */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: black;
-      text-align: center;
-      background-image: url('https://i.postimg.cc/YSr5P4hp/6a8ea07b-58b4-4b87-b58b-09bd85b6a2bb.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
-    }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+    background-image: url('https://i.postimg.cc/YSr5P4hp/6a8ea07b-58b4-4b87-b58b-09bd85b6a2bb.jpg'); 
+    background-size: cover; 
+    background-position: center; /
+    background-repeat: no-repeat; /
+    font-family: Arial, sans-serif; 
+  
+  }
+  header {
+    background-color: #6b02026c;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    background-image: url('https://i.postimg.cc/zfbNxZ9p/batman.jpg');
+    background-position: center; /
+    background-repeat:no-repeat; 
+    background-size: cover; 
+  }
 
     nav {
       text-align: center;
@@ -52,13 +63,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 20px;
+      padding: 100px;
+      clear: left; /* Adiciona esta propriedade para pular para a próxima coluna após o sexto elemento */
     }
 
     .recommendation {
       margin: 10px;
       background-color: #333;
-      width: 200px;
+      width: calc(16.666% - 20px); /* 6 colunas em computadores */
       text-align: center;
       border-radius: 5px;
       font-size: 14px;
@@ -85,7 +97,7 @@
       }
 
       .recommendation {
-        width: calc(33.33% - 20px);
+        width: calc(33.33% - 20px); /* 3 colunas em dispositivos móveis */
         font-size: 12px;
       }
 
@@ -94,7 +106,8 @@
         font-size: 14px;
       }
     }
-   
+
+
   </style>
 </head>
 
@@ -172,6 +185,62 @@
 
             </div>
           </div>
+          <div class="recommendation">
+            <a href="https://www.dailymotion.com/video/x8m104f">
+              <img src="https://i.postimg.cc/gkjwjV4D/run.jpg" alt="Filme 1">
+            </a>
+            <div class="text">
+              <h1>Run</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://www.dailymotion.com/video/x8m104f">
+              <img src="https://i.postimg.cc/MG4rQm88/fratura.webp" alt="Filme 2">
+            </a>
+            <div class="text">
+              <h1>Fratura</h1>
+
+            </div>
+          </div>
+          <!-- Add-->
+          <div class="recommendation">
+            <a href="https://www.dailymotion.com/video/x6zjx9e">
+              <img src="https://i.postimg.cc/YCx2Zytr/bird-box-2.jpg" alt="Filme 3">
+            </a>
+            <div class="text">
+              <h1>Bird box</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://youtu.be/eHsWYmnXk1o?si=LWkkEz903cwN19s2">
+              <img src="https://i.postimg.cc/MZNmG9jh/hipnose.jpg" alt="Filme 4">
+            </a>
+            <div class="text">
+              <h1>Hypnotic</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://youtu.be/dD264ZjfKlk?si=3N93iWFTgViPaxGX">
+              <img src="https://i.postimg.cc/GpRCnPQD/it-filme.jpg" alt="Filme 5">
+            </a>
+            <div class="text">
+              <h1>IT A COISA</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://youtu.be/5XeyXtTi8LE?si=1KajZo1sw3SQ5JLC">
+              <img src="https://i.postimg.cc/5NRCNyYp/a-cinco.jpg" alt="Filme 6">
+            </a>
+            <div class="text">
+              <h1>A Cinco Passos de Você</h1>
+              
+
+            </div>
+          </div>
         </div>
       </section>
       <br>
@@ -234,6 +303,52 @@
             </div>
           </div>
           <div class="recommendation">
+            <a href="https://youtu.be/lW5kiEUVlpo?si=GMKsAMIYcg1MhUnW">
+              <img src="https://i.postimg.cc/C5wSsw9t/THE-LAST-OF-US.jpg" alt="Série 6">
+            </a>
+            <div class="text">
+              <h1>The Last Of Us</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://youtu.be/9RNHKKYJvg8?si=YAG0tkqse43FmO23">
+              <img src="https://i.postimg.cc/1zzW62WH/DARK.jpg" alt="serie 7">
+            </a>
+            <div class="text">
+              <h1>DARK</h1>
+
+            </div>
+          </div>
+          <!-- Add-->
+          <div class="recommendation">
+            <a href="https://youtu.be/DLCM0xqoiNQ?si=25plWIJ-2xwnGtoS">
+              <img src="https://i.postimg.cc/5yk94ZkR/13-REASONS.jpg" alt="serie 8">
+            </a>
+            <div class="text">
+              <h1>13 reasons why</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://youtu.be/rkD9QfPhHl0?si=d2NAoKZIczHpT8nb">
+              <img src="https://i.postimg.cc/bJZp66v0/1899.jpg" alt="Serie 9">
+            </a>
+            <div class="text">
+              <h1>1899</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
+            <a href="https://youtu.be/WoV4O0Jfm8U?si=T1qACm24AE4A9O9T">
+              <img src="https://i.postimg.cc/63P5wkP1/YOU.jpg" alt="Serie 10">
+            </a>
+            <div class="text">
+              <h1>YOU</h1>
+
+            </div>
+          </div>
+          <div class="recommendation">
             <a href="https://youtu.be/apltEQy8RzQ?si=WH8x76cvmbfqthKF">
               <img src="https://i.postimg.cc/fknsBxn2/supernatural-2.jpg" alt="Serie 11">
             </a>
@@ -242,10 +357,9 @@
 
             </div>
           </div>
-
           
         </div>
-
+      </section>
       <br>
     </main>
 
