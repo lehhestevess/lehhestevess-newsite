@@ -21,17 +21,7 @@
     background-repeat: no-repeat; /
     font-family: Arial, sans-serif; 
   
-  }
-  header {
-    background-color: #6b02026c;
-    color: #ffffff;
-    padding: 30px;
-    text-align: center;
-    background-image: url('https://i.postimg.cc/zfbNxZ9p/batman.jpg');
-    background-position: center; /
-    background-repeat:no-repeat; 
-    background-size: cover; 
-  }
+
 
     nav {
       text-align: center;
@@ -69,7 +59,7 @@
 
     .recommendation {
       margin: 10px;
-      background-color: #333;
+      background-color: #0f0f0f;
       width: calc(16.666% - 20px); /* 6 colunas em computadores */
       text-align: center;
       border-radius: 5px;
@@ -107,18 +97,48 @@
       }
     }
 
+    p{
+      color: #ffffff;
+      font-size: 12px;
+    }
 
+    h2{
+      color: #ff0000c4;
+    }
+
+    .bannerseries {
+        max-width: 100%; /* Garante que a div não ultrapasse a largura do seu contêiner pai */
+        height: auto; /* Permite que a altura da div se ajuste automaticamente à altura da imagem */
+    }
+
+    /* Estilo para a imagem dentro da div */
+    .bannerseries img {
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
+        height: auto; /* Permite que a altura da imagem se ajuste automaticamente à largura, mantendo a proporção */
+        display: block; /* Remove espaços em branco abaixo da imagem */
+        margin: 0 auto; /* Centraliza a imagem na div */
+    }
+
+header {
+    background-color: #6b02026c;
+    color: #ffffff;
+    padding: 50px;
+    text-align: center;
+    background-image: url('https://imgbb.host/images/LhgTB.jpeg');
+    background-position: center; /
+    background-repeat:no-repeat; 
+    background-size: cover; 
+  }
   </style>
 </head>
 
+
 <body>
 
-  <div class="banner">
-    <h1>Recomendações - Filmes e Séries</h1>
-    <p>clique para assistir o trailer</p>
-  </div>
 
-  <div></div>
+  <header>
+    <h1></h1>
+  </header>
 
   <nav>
     <a href="#filmes">Filmes</a>
@@ -135,7 +155,7 @@
               <img src="https://i.postimg.cc/gkjwjV4D/run.jpg" alt="Filme 1">
             </a>
             <div class="text">
-              <h1>Run</h1>
+              <p>Run</p>
 
             </div>
           </div>
@@ -144,7 +164,7 @@
               <img src="https://i.postimg.cc/MG4rQm88/fratura.webp" alt="Filme 2">
             </a>
             <div class="text">
-              <h1>Fratura</h1>
+              <p>Fratura</p>
 
             </div>
           </div>
@@ -154,7 +174,7 @@
               <img src="https://i.postimg.cc/YCx2Zytr/bird-box-2.jpg" alt="Filme 3">
             </a>
             <div class="text">
-              <h1>Bird box</h1>
+              <p>Bird box</p>
 
             </div>
           </div>
@@ -163,7 +183,7 @@
               <img src="https://i.postimg.cc/MZNmG9jh/hipnose.jpg" alt="Filme 4">
             </a>
             <div class="text">
-              <h1>Hypnotic</h1>
+              <p>Hypnotic</p>
 
             </div>
           </div>
@@ -172,7 +192,7 @@
               <img src="https://i.postimg.cc/GpRCnPQD/it-filme.jpg" alt="Filme 5">
             </a>
             <div class="text">
-              <h1>IT A COISA</h1>
+              <p>IT A COISA</p>
 
             </div>
           </div>
@@ -181,7 +201,7 @@
               <img src="https://i.postimg.cc/5NRCNyYp/a-cinco.jpg" alt="Filme 6">
             </a>
             <div class="text">
-              <h1>A Cinco Passos de Você</h1>
+              <p>A Cinco Passos de Você</p>
 
             </div>
           </div>
@@ -190,7 +210,7 @@
               <img src="https://i.postimg.cc/gkjwjV4D/run.jpg" alt="Filme 1">
             </a>
             <div class="text">
-              <h1>Run</h1>
+              <p>Run</p>
 
             </div>
           </div>
@@ -199,7 +219,7 @@
               <img src="https://i.postimg.cc/MG4rQm88/fratura.webp" alt="Filme 2">
             </a>
             <div class="text">
-              <h1>Fratura</h1>
+              <p>Fratura</p>
 
             </div>
           </div>
@@ -209,7 +229,7 @@
               <img src="https://i.postimg.cc/YCx2Zytr/bird-box-2.jpg" alt="Filme 3">
             </a>
             <div class="text">
-              <h1>Bird box</h1>
+              <p>Bird box</p>
 
             </div>
           </div>
@@ -218,7 +238,7 @@
               <img src="https://i.postimg.cc/MZNmG9jh/hipnose.jpg" alt="Filme 4">
             </a>
             <div class="text">
-              <h1>Hypnotic</h1>
+              <p>Hypnotic</p>
 
             </div>
           </div>
@@ -227,7 +247,7 @@
               <img src="https://i.postimg.cc/GpRCnPQD/it-filme.jpg" alt="Filme 5">
             </a>
             <div class="text">
-              <h1>IT A COISA</h1>
+              <p>IT A COISA</p>
 
             </div>
           </div>
@@ -236,7 +256,7 @@
               <img src="https://i.postimg.cc/5NRCNyYp/a-cinco.jpg" alt="Filme 6">
             </a>
             <div class="text">
-              <h1>A Cinco Passos de Você</h1>
+              <p>A Cinco Passos de Você</p>
               
 
             </div>
@@ -246,13 +266,18 @@
       <br>
       <section id="series">
         <h2>Séries</h2>
-        <div class="container">
+        
+      <div class="bannerseries">
+        <img src="https://imgbb.host/images/LhgTB.jpeg" alt="Filme 1">
+      </div>
+       
+      <div class="container">
           <div class="recommendation">
             <a href="https://youtu.be/lW5kiEUVlpo?si=GMKsAMIYcg1MhUnW">
               <img src="https://i.postimg.cc/C5wSsw9t/THE-LAST-OF-US.jpg" alt="Série 6">
             </a>
             <div class="text">
-              <h1>The Last Of Us</h1>
+              <p>The Last Of Us</p>
 
             </div>
           </div>
@@ -261,7 +286,7 @@
               <img src="https://i.postimg.cc/1zzW62WH/DARK.jpg" alt="serie 7">
             </a>
             <div class="text">
-              <h1>DARK</h1>
+              <p>DARK</p>
 
             </div>
           </div>
@@ -271,16 +296,16 @@
               <img src="https://i.postimg.cc/5yk94ZkR/13-REASONS.jpg" alt="serie 8">
             </a>
             <div class="text">
-              <h1>13 reasons why</h1>
+              <p>13 reasons why</p>
 
             </div>
           </div>
           <div class="recommendation">
             <a href="https://youtu.be/rkD9QfPhHl0?si=d2NAoKZIczHpT8nb">
-              <img src="https://i.postimg.cc/bJZp66v0/1899.jpg" alt="Serie 9">
+              <img src="https://imgbb.host/images/LhMLq.jpeg" alt="Serie 9">
             </a>
             <div class="text">
-              <h1>1899</h1>
+              <p>La casa de Papel</p>
 
             </div>
           </div>
@@ -289,7 +314,7 @@
               <img src="https://i.postimg.cc/63P5wkP1/YOU.jpg" alt="Serie 10">
             </a>
             <div class="text">
-              <h1>YOU</h1>
+              <p>YOU</p>
 
             </div>
           </div>
@@ -298,7 +323,7 @@
               <img src="https://i.postimg.cc/fknsBxn2/supernatural-2.jpg" alt="Serie 11">
             </a>
             <div class="text">
-              <h1>Supernatural</h1>
+              <p>Supernatural</p>
 
             </div>
           </div>
@@ -307,7 +332,7 @@
               <img src="https://i.postimg.cc/C5wSsw9t/THE-LAST-OF-US.jpg" alt="Série 6">
             </a>
             <div class="text">
-              <h1>The Last Of Us</h1>
+              <p>The Last Of Us</p>
 
             </div>
           </div>
@@ -316,7 +341,7 @@
               <img src="https://i.postimg.cc/1zzW62WH/DARK.jpg" alt="serie 7">
             </a>
             <div class="text">
-              <h1>DARK</h1>
+              <p>DARK</p>
 
             </div>
           </div>
@@ -326,7 +351,7 @@
               <img src="https://i.postimg.cc/5yk94ZkR/13-REASONS.jpg" alt="serie 8">
             </a>
             <div class="text">
-              <h1>13 reasons why</h1>
+              <p>13 reasons why</p>
 
             </div>
           </div>
@@ -335,7 +360,7 @@
               <img src="https://i.postimg.cc/bJZp66v0/1899.jpg" alt="Serie 9">
             </a>
             <div class="text">
-              <h1>1899</h1>
+              <p>1899</p>
 
             </div>
           </div>
@@ -344,7 +369,7 @@
               <img src="https://i.postimg.cc/63P5wkP1/YOU.jpg" alt="Serie 10">
             </a>
             <div class="text">
-              <h1>YOU</h1>
+              <p>YOU</p>
 
             </div>
           </div>
@@ -353,7 +378,7 @@
               <img src="https://i.postimg.cc/fknsBxn2/supernatural-2.jpg" alt="Serie 11">
             </a>
             <div class="text">
-              <h1>Supernatural</h1>
+              <p>Supernatural</p>
 
             </div>
           </div>
