@@ -19,7 +19,7 @@
     background-size: cover; 
     background-position: center; /
     background-repeat: no-repeat; /
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif; }
   
 
 
@@ -73,7 +73,7 @@
     }
 
     /* Estilos responsivos */
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 1000px) {
       header {
         font-size: 20px;
       }
@@ -105,24 +105,26 @@
     h2{
       color: #ff0000c4;
     }
-
-    .bannerseries {
-        max-width: 100%; /* Garante que a div não ultrapasse a largura do seu contêiner pai */
-        height: auto; /* Permite que a altura da div se ajuste automaticamente à altura da imagem */
+     
+    .linkcor {
+    background-color: #fff;
     }
 
-    /* Estilo para a imagem dentro da div */
-    .bannerseries img {
-        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da div */
-        height: auto; /* Permite que a altura da imagem se ajuste automaticamente à largura, mantendo a proporção */
-        display: block; /* Remove espaços em branco abaixo da imagem */
-        margin: 0 auto; /* Centraliza a imagem na div */
+    .bannerseries {
+      background-color: #6b02026c;
+    color: #ffffff;
+    padding: 80px;
+    text-align: center;
+    background-image: url('https://i.postimg.cc/Gt9vg2wm/banner-the-wlk.jpg');
+    background-position: center; /
+    background-repeat:no-repeat; 
+    background-size: cover; 
     }
 
 header {
     background-color: #6b02026c;
     color: #ffffff;
-    padding: 60px;
+    padding: 70px;
     text-align: center;
     background-image: url('https://i.postimg.cc/Z5q5qyKD/baaaaaner.jpg');
     background-position: center; /
@@ -138,7 +140,7 @@ header {
     background-image: url('');
     background-position: center; /
     background-repeat:no-repeat; 
-    background-size: cover; 
+    background-size: cover;     
 }
 
   </style>
@@ -163,6 +165,7 @@ header {
   <div class="h">
     <main>
       <section id="filmes">
+        
         <h2>Filmes</h2>
         <div class="container">
           <div class="recommendation">
@@ -335,12 +338,13 @@ header {
       </section>
       <br>
       <section id="series">
-        <h2>Séries</h2>
         
       <div class="bannerseries">
-        <img src="https://i.postimg.cc/xjFjq1hs/banner-16.png" alt="banner">
+    
       </div>
-       
+      <br>
+      <h2>Séries</h2>
+
       <div class="container">
           <div class="recommendation">
             <a href="https://youtu.be/lW5kiEUVlpo?si=GMKsAMIYcg1MhUnW">
@@ -514,6 +518,11 @@ header {
       <br>
     </main>
 
-</body>
+  <div class="linkcor">
+    <a href="https://lehhestevess.github.io/IntroducaoAoHtml/">Introdução ao HTML;</a>
+    <a href="h https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo;</a>
+    <a href="https://lehhestevess.github.io/leticiaatividades/">Tabela</a>
+  </div>     
 
+</body>
 </html>
