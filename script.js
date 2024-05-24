@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+/*window.addEventListener("load", function () {
     let container = document.querySelector(".image-row");
   
     let scrollAmount = 0;
@@ -22,4 +22,5 @@ window.addEventListener("load", function () {
     });
   });
 
-  
+  */
+
