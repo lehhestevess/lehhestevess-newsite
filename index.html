@@ -15,7 +15,7 @@
     padding: 0;
     background-color: black;
     text-align: center;
-    background-image: url('https://i.postimg.cc/ht3v811t/5.jpg'); 
+    background-image: url('https://i.postimg.cc/jdrgLHhF/preto-fundo.png'); 
     background-size: cover; 
     background-position: center; /
     background-repeat: no-repeat; /
@@ -199,6 +199,60 @@ h1{
     max-width: 250px;
     height: auto;
   }
+
+.
+
+  h2 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #494949;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.aviso{
+    background-color: #af4c4c;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+
   </style>
 </head>
 <body>
@@ -709,6 +763,23 @@ h1{
     </main>
 
 
+    <h2>Contato</h2>
+    <!--<form action="process_form.php" method="post">-->
+   <form action="https://formspree.io/f/manwwydn" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+  
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+  
+        <input type="submit" value="Enviar">
+  
+    </form>
+<br>
+    
   <div class="linkcor">
     <a href="https://lehhestevess.github.io/IntroducaoAoHtml/">Introdução ao HTML;</a>
     <a href="https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo;</a>
@@ -716,7 +787,7 @@ h1{
     <a href="https://lehhestevess.github.io/Lista-de-Tarefas-/">Lista-de-Tarefas-</a>
   </div>     
 
-  
+
 
 </body>
 </html>
