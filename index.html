@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> (Letícia) Recomendações - Filmes e Séries </title>
   <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 
   <script>
     document.getElementById('menu').addEventListener('change', function() {
@@ -15,320 +16,7 @@
     });
 </script>
 
-  <style>
  
-   
-    body {
-    font-family: Arial, sans-serif;
-    padding: 0;
-    background-color: black;
-    text-align: center;
-    background-image: url('https://i.postimg.cc/jdrgLHhF/preto-fundo.png'); 
-    background-size: cover; 
-    background-position: center; /
-    background-repeat: no-repeat; /
-    font-family: Arial, sans-serif;
-    margin: 0px; }
-   
-  
-
-
-    nav {
-      text-align: center;
-      background-color: #000;
-      padding: 10px;
-      border: 2px solid #fff; 
-      border-radius: 10px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 5px;
-      font-size: 18px;
-    }
-
-    .recommendation img {
-      width: 100%;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      transition: transform 0.3s; 
-    }
-
-    .recommendation img:hover {
-      transform: scale(1.1); 
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      clear: left; 
-    }
-
-    .recommendation {
-      margin: 5px;
-      background-color: #0f0f0f;
-      width: calc(16.666% - 20px); 
-      text-align: center;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    .recommendation h3,
-    .recommendation p {
-      margin: 0px;
-      font-size: 16px;
-    }
-
-  
-    @media only screen and (max-width: 1000px) {
-      
-      header {
-        font-size: 20px;
-      }
-
-      nav a {
-        font-size: 16px;
-      }
-
-      .container {
-        padding: 0px;
-      }
-
-      .recommendation {
-        width: calc(33.33% - 20px); 
-        font-size: 12px;
-      }
-
-      .recommendation h3,
-      .recommendation p {
-        font-size: 14px;
-      }
-    }
-
-    p{
-      color: #ffffff;
-      font-size: 12px;
-    }
-
-    h2{
-      color: #ff0000c4;
-    }
-     
-    .linkcor {
-    background-color: #fff;
-    }
-
-
-
-header {
-    background-color: #6b02026c;
-    color: #ffffff;
-    padding: 70px;
-    text-align: center;
-    background-image: url('https://i.postimg.cc/1tzK7QgZ/baaaaaner.jpg');
-    background-position: center; /
-    background-repeat:no-repeat; 
-    background-size: cover; 
-  }
-
-  .banner{
-  background-color: #00000000;
-    color: #ffffff;
-    padding: 0px;
-    text-align: center;
-    background-image: url('');
-    background-position: center; /
-    background-repeat:no-repeat; 
-    background-size: cover;     
-}
-
-.marquee{
-  animation-duration: 3s;
-  
-}
-
-.image-row {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: calc(100% - 20px);
-  margin: 0 auto;
-}
-
-.image-row::-webkit-scrollbar {
-  width: 8px;
-}
-
-.image-row::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-.image-row::-webkit-scrollbar-thumb {
-  background: rgba(19, 19, 19, 0.5);
-  border-radius: 10px;
-  width: 5px;
-}
-
-.image-row img {
-  width: 170px;
-  margin-right: 10px;
-  border-radius: 10px;
-  transition: filter 0.3s ease;
-}
-
-.image-row img:hover {
-  filter: grayscale(100%);
-}
-
-@media only screen and (max-width: 768px) {
-  .image-row img {
-    width: 125px;
-  }
-}
-    @media only screen and (min-width: 1000px) {
-  main {
-    margin:40px; 
-  }
-}
-
-h1{
-  color: #b9b9b9;
-}
-
-.os-melhores {
-    text-align: left;
-  }
-  .os-melhores img {
-    max-width: 260px;
-    height: auto;
-  }
-
-.
-
-  h2 {
-    color: #333;
-    text-align: center;
-}
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #494949;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #c00909;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #e40000;
-}
-.aviso{
-    background-color: #d30000;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-
-}
-
-
-.form-container {
-  max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #494949;
-}
-
-
-form h2 {
-    margin-top: 0;
-    color: #ffffff; 
-    text-align: center;
-}
-
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #000000; 
-}
-
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
-
-
-input:invalid, textarea:invalid {
-    border-color: #ffffff; 
-}
-
-
-.error-message {
-    color: #d9534f; 
-    font-size: 0.875em;
-    display: none; 
-}
-
-
-button {
-    background-color: #990000; 
-    color: #fff;
-
-    padding: 10px 20px;
-    border-radius: 0px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #31b0d5;
-}
-
-  </style>
 </head>
 <body>
 
@@ -608,6 +296,7 @@ button:hover {
             </div>
         </section>
       <br>
+      
       <section id="filmes">
         <h2>Filmes</h2>
         <div class="container">
@@ -620,6 +309,7 @@ button:hover {
               <p>Run</p>
 
             </div>
+            
           </div>
           <div class="recommendation">
             <a href="https://www.dailymotion.com/video/x8m104f">
@@ -722,6 +412,8 @@ button:hover {
      
             </div>
           </div>
+          
+          
           <div class="recommendation">
             <a href="https://www.dailymotion.com/video/x8m104f">
               <img src="https://i.postimg.cc/QdZZ2ZGx/continencia.jpg" alt="Filme 13">
@@ -839,6 +531,261 @@ button:hover {
       <br>
     </main>
 
+  
+    <div class="image-row">
+      <a href="link1.html"><img src="https://i.postimg.cc/pd8kR34n/malvado-favorito.jpg" alt="Imagem 1"></a>
+      <a href="link2.html"><img src="https://i.postimg.cc/k5s5Lgs1/divertida.jpg" alt="Imagem 2"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/pr4rkcCP/bad-boys.jpg" alt="Imagem 3"></a>
+      <a href="link1.html"><img src="https://i.postimg.cc/y8zYdZrp/dead.jpg" alt="Imagem 4"></a>
+      <a href="link2.html"><img src="https://i.postimg.cc/KY0ZJscC/armadilha.jpg" alt="Imagem 5"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/3wxy8Gk5/assim-que-acaba.jpg" alt="Imagem 6"></a>
+      <a href="link1.html"><img src="https://i.postimg.cc/L5t4B4J3/o-exorcismo.jpg" alt="Imagem 7"></a>
+      <a href="link2.html"><img src="https://i.postimg.cc/mg2ZCsB7/alien.jpg" alt="Imagem 8"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/7hkw6vKG/borderlands.jpg" alt="Imagem 9"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/QCmGdFBw/twisters.jpg" alt="Imagem 10"></a>
+       <a href="link2.html"><img src="https://i.postimg.cc/pd8kR34n/malvado-favorito.jpg" alt="Imagem 5"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/k5s5Lgs1/divertida.jpg" alt="Imagem 6"></a>
+      <a href="link1.html"><img src="https://i.postimg.cc/sg4Vt6nq/fabricante-de-lagrimas.jpg" alt="Imagem 7"></a>
+      <a href="link2.html"><img src="https://i.postimg.cc/SQ9bB1Rd/lugares-incrivris-rolagem.jpg" alt="Imagem 8"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/SRM1Vh5x/alice.jpg" alt="Imagem 9"></a>
+      <a href="link3.html"><img src="https://i.postimg.cc/PJs9fhJ4/all-of-us-are-rolagem.jpg" alt="Imagem 10"></a>
+      
+    </div>
+
+
+    <h1>Documentários</h1>
+    <section id="doramas">
+      <div class="container">
+        <div class="recommendation">
+          <a href="filme1.html">
+       
+            <img src="https://i.postimg.cc/MpFjwM8j/avatar.jpg" alt="Filme 1">
+          </a>
+          <div class="text">
+            <p>Run</p>
+
+          </div>
+          
+        </div>
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/MG4rQm88/fratura.webp" alt="Filme 2">
+          </a>
+          <div class="text">
+            <p>Fratura</p>
+
+          </div>
+        </div>
+ 
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x6zjx9e">
+            <img src="https://i.postimg.cc/YCx2Zytr/bird-box-2.jpg" alt="Filme 3">
+          </a>
+          <div class="text">
+            <p>Bird box</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/eHsWYmnXk1o?si=LWkkEz903cwN19s2">
+            <img src="https://i.postimg.cc/MZNmG9jh/hipnose.jpg" alt="Filme 4">
+          </a>
+          <div class="text">
+            <p>Hypnotic</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/dD264ZjfKlk?si=3N93iWFTgViPaxGX">
+            <img src="https://i.postimg.cc/GpRCnPQD/it-filme.jpg" alt="Filme 5">
+          </a>
+          <div class="text">
+            <p>IT A COISA</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/5XeyXtTi8LE?si=1KajZo1sw3SQ5JLC">
+            <img src="https://i.postimg.cc/8zCmnNW3/smile.jpg" alt="Filme 6">
+          </a>
+          <div class="text">
+            <p>Smile</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/k5CYcnrK/rua-do-medo.jpg" alt="Filme 7">
+          </a>
+          <div class="text">
+            <p>Rua do Medo 1</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/G26fb9PH/rua-do-medo-2.jpg" alt="Filme 8">
+          </a>
+          <div class="text">
+            <p>Rua do Medo 2</p>
+
+          </div>
+        </div>
+      
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x6zjx9e">
+            <img src="https://i.postimg.cc/13yjmkFc/rua-do-medo-3.jpg" alt="Filme 9">
+          </a>
+          <div class="text">
+            <p>Rua do Medo 3</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/eHsWYmnXk1o?si=LWkkEz903cwN19s2">
+            <img src="https://i.postimg.cc/wjgb5qYJ/a-orfa.jpg" alt="Filme 10">
+          </a>
+          <div class="text">
+            <p>A orfã</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/dD264ZjfKlk?si=3N93iWFTgViPaxGX">
+            <img src="https://i.postimg.cc/BbGChFcc/alive.jpg" alt="Filme 11">
+          </a>
+          <div class="text">
+            <p>>Alive</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/5XeyXtTi8LE?si=1KajZo1sw3SQ5JLC">
+            <img src="https://i.postimg.cc/wv7rtw8G/a-ao-the-rock.jpg" alt="Filme 12">
+          </a>
+          <div class="text">
+            <p>Alerta Vermelho</p>
+   
+          </div>
+        </div>
+        
+        
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/QdZZ2ZGx/continencia.jpg" alt="Filme 13">
+          </a>
+          <div class="text">
+            <p>Continência ao Amor</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/KYqGSpDq/estrelas.jpg" alt="Filme 14">
+          </a>
+          <div class="text">
+            <p>corra</p>
+
+          </div>
+        </div>
+  
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x6zjx9e">
+            <img src="https://i.postimg.cc/nVQHgkj2/como-eu-era-antes-de-voce.jpg" alt="Filme 15">
+          </a>
+          <div class="text">
+            <p>Como eu era antes de vc</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/eHsWYmnXk1o?si=LWkkEz903cwN19s2">
+            <img src="https://i.postimg.cc/Zn1zY1WH/por-lugares-incriveis.jpg" alt="Filme 16">
+          </a>
+          <div class="text">
+            <p>Por Lugares Incríveis</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/dD264ZjfKlk?si=3N93iWFTgViPaxGX">
+            <img src="https://i.postimg.cc/R0sHsR69/as-avanatgens-de-ser-invisivel.webp" alt="Filme 17">
+          </a>
+          <div class="text">
+            <p>As vantagens de ser invisível</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/5XeyXtTi8LE?si=1KajZo1sw3SQ5JLC">
+            <img src="https://i.postimg.cc/5NRCNyYp/a-cinco.jpg" alt="Filme 18">
+          </a>
+          <div class="text">
+            <p>A Cinco Passos de Você</p>
+
+          </div>
+        </div>
+
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/gkjwjV4D/run.jpg" alt="Filme 13">
+          </a>
+          <div class="text">
+            <p>CORRA</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x8m104f">
+            <img src="https://i.postimg.cc/GpLkSQWw/the-silence-2-Copia.jpg" alt="Filme 14">
+          </a>
+          <div class="text">
+            <p>O Silencio</p>
+
+          </div>
+        </div>
+  
+        <div class="recommendation">
+          <a href="https://www.dailymotion.com/video/x6zjx9e">
+            <img src="https://i.postimg.cc/fW90CpVS/carriee.jpg" alt="Filme 15">
+          </a>
+          <div class="text">
+            <p>CARRIE</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/eHsWYmnXk1o?si=LWkkEz903cwN19s2">
+            <img src="https://i.postimg.cc/sXZ1nGgC/halloween.jpg" alt="Filme 16">
+          </a>
+          <div class="text">
+            <p>Halloween</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/dD264ZjfKlk?si=3N93iWFTgViPaxGX">
+            <img src="https://i.postimg.cc/RZyBgs6q/anabelle.jpg" alt="Filme 17">
+          </a>
+          <div class="text">
+            <p>anabelle</p>
+
+          </div>
+        </div>
+        <div class="recommendation">
+          <a href="https://youtu.be/5XeyXtTi8LE?si=1KajZo1sw3SQ5JLC">
+            <img src="https://i.postimg.cc/sDxqbPRW/oxigenio.jpg" alt="Filme 18">
+          </a>
+          <div class="text">
+            <p>A Cinco Passos de Você</p>
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <br>
     <div class="form-container">
       <form id="form">
           <h2>Informações de contato</h2>
@@ -863,7 +810,7 @@ button:hover {
           <button type="submit">Enviar</button>
       </form>
   </div>
-  <script src="script.js"></script>
+  
 
     
 <br>
