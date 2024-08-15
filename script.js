@@ -111,4 +111,6 @@
             event.preventDefault(); // Impede o envio do formulário se houver erros
         }
     });
-});
+}); 
+
+

@@ -30,9 +30,9 @@ nav a {
 }
 
 .recommendation img {
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  width: 95%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6%;
   transition: transform 0.3s; 
 }
 
@@ -49,7 +49,7 @@ nav a {
 
 .recommendation {
   margin: 4px;
-  background-color: #0f0f0f;
+  background-color: #000000;
   width: calc(15.666% - 25px); 
   text-align: center;
   border-radius: 5px;
@@ -156,7 +156,7 @@ width: 5px;
 }
 
 .image-row img {
-width: 160px;
+width: 190px;
 margin-right: 10px;
 border-radius: 10px;
 transition: filter 0.3s ease;
@@ -309,3 +309,39 @@ button:hover {
 background-color: #31b0d5;
 }
 
+
+.container {
+    margin: 20px;
+    text-align: center;
+}
+
+.netflix-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #272727;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin: auto;
+}
+
+.netflix-button:hover {
+    background-color: #f40612;
+}
+
+
+.netflix-button span {
+    display: flex;
+    align-items: center;
+}
+
+#netflix-logo{
+  width: 30px; 
+  margin-right: 20px;
+}
