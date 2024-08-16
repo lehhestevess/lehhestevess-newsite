@@ -319,46 +319,47 @@ background-color: #31b0d5;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  color: #fff;
+  padding: 8px 16px; 
   background-color: #272727;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px; 
   transition: background-color 0.3s ease;
   width: auto; 
-  max-width: 100%; 
+  max-width: 300px;
   box-sizing: border-box; 
-  margin: 10px auto;
+  margin: 10px auto; 
 }
 
 .netflix-button:hover {
   background-color: #f40612;
 }
 
-.netflix-button img {
+#netflix-logo {
   width: 24px; 
-  margin-right: 10px;
+  margin-right: 8px; 
 }
 
 .netflix-button span {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 14px; 
 }
+
 
 @media (max-width: 768px) {
   .netflix-button {
-      padding: 8px 16px; 
-      font-size: 14px; 
-  
-  .netflix-button img {
+      padding: 6px 12px; 
+      font-size: 12px; 
+      max-width: 200px; 
+  }
+
+  #netflix-logo {
       width: 20px; 
-      margin-right: 8px; 
+      margin-right: 6px;
   }
-  
+
   .netflix-button span {
-      font-size: 12px;
-  }
+      font-size: 12px; 
 }
