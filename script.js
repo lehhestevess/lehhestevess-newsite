@@ -114,3 +114,7 @@
 }); 
 
 
+document.querySelector('.more-options-button').addEventListener('click', function() {
+  const moreApps = document.querySelector('.more-apps');
+  moreApps.classList.toggle('hidden'); // Alterna a visibilidade do contêiner
+});
