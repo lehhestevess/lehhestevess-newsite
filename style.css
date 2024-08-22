@@ -156,7 +156,7 @@ width: 5px;
 }
 
 .image-row img {
-width: 190px;
+width: 400px;
 margin-right: 10px;
 border-radius: 10px;
 transition: filter 0.3s ease;
@@ -168,7 +168,7 @@ filter: grayscale(100%);
 
 @media only screen and (max-width: 768px) {
 .image-row img {
-width: 125px;
+width: px;
 }
 }
 @media only screen and (min-width: 1000px) {
@@ -185,7 +185,7 @@ color: #b9b9b9;
 text-align: left;
 }
 .os-melhores img {
-max-width: 260px;
+max-width: 250px;
 height: auto;
 }
 
@@ -447,3 +447,11 @@ background-color: #31b0d5;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(238, 227, 227, 0.1) 50%, rgba(0, 0, 0, 0) 100%);
   margin: 20px 0;
 }
+
+.error-message {
+  color: red;
+  display: none; 
+  font-size: 0.875em; 
+  margin-top: 0.25em; 
+}
+

@@ -57,8 +57,9 @@
     const emailInput = document.getElementById("email");
     const nomeError = document.getElementById("nome-error");
     const emailError = document.getElementById("email-error");
+    const sugestoesTextarea = document.getElementById("sugestoes");
+    const sugestoesError = document.getElementById("sugestoes-error");
 
-    // Função para validar o nome
     function validateNome() {
         const nome = nomeInput.value.trim();
         if (nome === "") {
@@ -80,7 +81,6 @@
         return true;
     }
 
-    // Função para validar o e-mail
     function validateEmail() {
         const email = emailInput.value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -98,23 +98,42 @@
         return true;
     }
 
-    // Adicionar eventos de validação em tempo real
+    function validateSugestoes() {
+        const texto = sugestoesTextarea.value.trim();
+        const palavras = texto.split(/\s+/); 
+        const maxPalavras = 10;
+
+        if (texto.length > 80) {
+            sugestoesError.textContent = "A sugestão deve ter no máximo 80 caracteres.";
+            sugestoesError.style.display = "block";
+            return false;
+        } else if (palavras.length > maxPalavras) {
+            sugestoesError.textContent = `A sugestão deve ter no máximo ${maxPalavras} palavras.`;
+            sugestoesError.style.display = "block";
+            return false;
+        } else {
+            sugestoesError.style.display = "none";
+            return true;
+        }
+    }
+
     nomeInput.addEventListener("input", validateNome);
     emailInput.addEventListener("input", validateEmail);
+    sugestoesTextarea.addEventListener("input", validateSugestoes);
 
-    // Validação no envio do formulário
     form.addEventListener("submit", function(event) {
         const isNomeValid = validateNome();
         const isEmailValid = validateEmail();
+        const isSugestoesValid = validateSugestoes();
 
-        if (!isNomeValid || !isEmailValid) {
-            event.preventDefault(); // Impede o envio do formulário se houver erros
+        if (!isNomeValid || !isEmailValid || !isSugestoesValid) {
+            event.preventDefault();
         }
     });
-}); 
-
+});
 
 document.querySelector('.more-options-button').addEventListener('click', function() {
   const moreApps = document.querySelector('.more-apps');
-  moreApps.classList.toggle('hidden'); // Alterna a visibilidade do contêiner
+  moreApps.classList.toggle('hidden'); 
 });
+
