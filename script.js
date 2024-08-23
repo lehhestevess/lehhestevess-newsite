@@ -138,20 +138,19 @@ document.querySelector('.more-options-button').addEventListener('click', functio
 });
 
 
-        // Adiciona um listener para quando o vídeo terminar
         document.getElementById('videoFrame').addEventListener('load', function() {
           var iframe = document.getElementById('videoFrame');
           var player = new DM.player(iframe);
           
-          // Função para reiniciar o vídeo quando ele termina
+          
           function loopVideo() {
               player.addEventListener('ended', function() {
                   player.play();
               });
           }
 
-          // Inicializa o loop
+      
           loopVideo();
       });
 
-      <script src="https://api.dm.com/js/player.js"></script>
+       src="https://api.dm.com/js/player.js"

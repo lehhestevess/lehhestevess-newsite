@@ -465,17 +465,16 @@ background-color: #31b0d5;
 
 .videoo{
 padding: 10px;
-transform: translateY(-20px); /* Ajuste o valor conforme necessário */
+transform: translateY(-20px);
 border-radius:17%;
 }
 
    .recommendation {
-      margin: 15px; /* Valor padrão de margem */
+      margin: 15px; 
     }
     
-    /* Estilos para telas pequenas */
-    @media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+    @media (max-width: 768px) { 
       .recommendation {
-        margin: 5px; /* Valor de margem reduzido para telas pequenas */
+        margin: 5px;
       }
     }
