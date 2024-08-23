@@ -137,3 +137,9 @@ document.querySelector('.more-options-button').addEventListener('click', functio
   moreApps.classList.toggle('hidden'); 
 });
 
+
+
+
+
+      
+      

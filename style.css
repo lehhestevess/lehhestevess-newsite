@@ -166,11 +166,19 @@ transition: filter 0.3s ease;
 filter: grayscale(100%);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 .image-row img {
-width: px;
+width: 260px;
 }
 }
+
+@media (max-width: 768px) {
+  .videoo {
+    width: 270px; 
+    height: 147px; 
+  }
+}
+
 @media only screen and (min-width: 1000px) {
 main {
 margin:40px; 
@@ -455,3 +463,28 @@ background-color: #31b0d5;
   margin-top: 0.25em; 
 }
 
+.videoo{
+padding: 10px;
+transform: translateY(-20px); 
+border-radius:17%;
+}
+
+   .recommendation {
+      margin: 15px; 
+    }
+    
+   
+    @media (max-width: 768px) { 
+      .recommendation {
+        margin: 5px; 
+      }
+    }   .recommendation {
+      margin: 15px; 
+    }
+    
+  
+    @media (max-width: 768px) { 
+      .recommendation {
+        margin: 5px; 
+      }
+    }
