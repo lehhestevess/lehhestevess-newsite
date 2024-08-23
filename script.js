@@ -138,19 +138,3 @@ document.querySelector('.more-options-button').addEventListener('click', functio
 });
 
 
-        document.getElementById('videoFrame').addEventListener('load', function() {
-          var iframe = document.getElementById('videoFrame');
-          var player = new DM.player(iframe);
-          
-          
-          function loopVideo() {
-              player.addEventListener('ended', function() {
-                  player.play();
-              });
-          }
-
-      
-          loopVideo();
-      });
-
-       src="https://api.dm.com/js/player.js"
