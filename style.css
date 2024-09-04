@@ -313,7 +313,7 @@ body {
   }
   
   button:hover {
-  background-color: #31b0d5;
+  background-color: #d53131;
   }
   
   
@@ -532,3 +532,35 @@ body {
   margin:40px; 
   }
   }
+
+  #error-message {
+    color: #d9534f;
+    font-size: 0.875em;
+    display: none; 
+}
+
+ 
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    border-radius: 10px; /
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
