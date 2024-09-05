@@ -537,29 +537,112 @@ width: 260px;
 }
 
  
-  .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 900px; 
-    margin: 0 auto; 
-    overflow: hidden;
-    border-radius: 10px; /
+ 
+Claro, aqui está o código sem as partes comentadas:
+
+```css
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
 .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
+  min-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
-=======
->>>>>>> 91c61eb9bb9f8647b46a833a3d2d82deb30ce4ce
+
+.image-row {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+}
+
+.image-row::-webkit-scrollbar {
+  width: 8px;
+}
+
+.image-row::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.image-row::-webkit-scrollbar-thumb {
+  background: rgba(19, 19, 19, 0.5);
+  border-radius: 10px;
+  width: 5px;
+}
+
+.image-row img {
+  width: 160px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+.image-row img:hover {
+  filter: grayscale(100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .image-row {
+    margin: 0 20px;
+    width: calc(100% - 40px);
+  }
+
+  .image-row img {
+    width: 125px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .image-row {
+    margin: 0 80px;
+    width: calc(100% - 160px);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main {
+    margin: 40px;
+  }
+}
+
+.navbar {
+  width: 50%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 3px;
+}
+```
