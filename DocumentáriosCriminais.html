@@ -16,8 +16,11 @@
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
+    <div class="top-bar-content">
+        <img src="https://i.postimg.cc/fL7S56Dt/Black-and-White-Circle-Business-Logo-removebg-preview-1.png" alt="Descrição da Imagem" class="top-bar-image">
+        <span class="top-bar-text">Movie Fusion</span>
+    </div>
 </div>
-
 <nav id="menu" class="menu">
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -38,7 +41,7 @@
         <div class="carousel-item">
             <img src="https://i.postimg.cc/KYV8xHrh/fa5910b7-34e4-435e-9046-14992522443d.jpg" alt="Imagem 3">
         </div>
-        <!-- Cópias das imagens para loop infinito -->
+        <!--  -->
         <div class="carousel-item">
           <img src="https://i.postimg.cc/Dynh1Txw/6c8f7575-ff02-4f65-94d8-9ada2b127ae0.jpg" alt="Imagem 1">
       </div>
@@ -208,7 +211,7 @@
         
         <div class="recommendation">
           <a href="https://www.dailymotion.com/video/x8m104f">
-            <img src="https://i.postimg.cc/QdZZ2ZGx/continencia.jpg" alt="Filme 13">
+            <img src="https://i.postimg.cc/dQ92wTrM/b61e50ed-4a74-4617-8ae0-f356225b00e8.jpg" alt="Filme 13">
             <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
               <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
               <span>Assista </span>
@@ -359,203 +362,226 @@
   </main>
  
     
-
-  <script>
-    document.getElementById('form').addEventListener('submit', function(event) {
-        var textarea = document.getElementById('sugestoes');
-        var errorSpan = document.getElementById('sugestoes-error');
-      
-        var wordLimit = 10;
-        var words = textarea.value.trim().split(/\s+/);
-        
-        if (words.length > wordLimit) {
-
-            event.preventDefault();
-            
-   
-            errorSpan.textContent = 'Você pode inserir no máximo ' + wordLimit + ' palavras.';
-            errorSpan.style.display = 'block';
-            textarea.focus();
-        } else {
-
-            errorSpan.style.display = 'none';
-        }
-    });
-    </script>
+  <style>
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-width: 1900px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
     
-    Aqui está o código com todos os comentários removidos:
-
-    ```html
-    <style>
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 1200px; 
-            margin: 0 auto; 
-            overflow: hidden;
-            border-radius: 10px; 
-        }
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
     
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
+    .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
     
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     
+    @media (max-width: 600px) {
         .carousel-item img {
-            width: 100%;
-            height: auto;
-            display: block;
+            content: url('https://i.postimg.cc/3RTGHKwJ/netflix-5-documentarios-sobre-crimes-reais-que-voce-precisa-conhecer-capa.jpg'); 
         }
-    
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+        .carousel-item:nth-child(2) img {
+            content: url('https://i.postimg.cc/25pb4zhF/images-3.jpg'); 
         }
+        .carousel-item:nth-child(3) img {
+            content: url('https://i.postimg.cc/8CDkpsL3/hq720.jpg'); 
+        }
+        .carousel-item:nth-child(4) img {
+            content: url('https://i.postimg.cc/dV93T8Qv/8-melhores-documentarios-netflix-assistir-imdb-reproducao-widelg.jpg');
+        }
+    }
     
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .top-bar {
+        background-color: rgb(0, 0, 0);
+        height: 40px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+    }
+    
+    .top-bar-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .top-bar-image {
+        height: 90px;
+        margin-right: 10px;
+    }
+    
+    .top-bar-text {
+        font-size: 16px;
+        color: white;
+    }
+    
+    .top-bar.hidden {
+        transform: translateY(-100%);
+    }
+    
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 15px;
+        cursor: pointer;
+    }
+    
+    .bar {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+    }
+    
+    .menu {
+        position: fixed;
+        top: 40px;
+        left: -180px;
+        width: 180px;
+        height: auto;
+        max-height: 90%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        padding: 10px;
+        z-index: 999;
+        box-sizing: border-box;
+    }
+    
+    .menu.open {
+        left: 0;
+    }
+    
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu ul li {
+        padding: 8px 0;
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 6px;
+        border-radius: 4px;
+    }
+    
+    .menu ul li a:hover {
+        background-color: #f0f0f0;
+    }
+    
+    main {
+        margin-top: 40px;
+    }
+    
+    @media (max-width: 600px) {
         .top-bar {
-            background-color: rgb(65, 0, 0);
-            height: 40px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            box-sizing: border-box;
+            height: 30px;
+            padding: 0 10px;
         }
     
         .menu-icon {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 25px;
-            height: 15px;
-            cursor: pointer;
+            width: 20px;
+            height: 12px;
         }
     
         .bar {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            border-radius: 2px;
-        }
-    
-        .menu {
-            position: fixed;
-            top: 40px;
-            left: -180px;
-            width: 180px;
-            height: auto;
-            max-height: 90%;
-            background-color: white;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-            transition: left 0.3s ease;
-            overflow-y: auto;
-            padding: 10px;
-            z-index: 999;
-            box-sizing: border-box;
-        }
-    
-        .menu.open {
-            left: 0;
-        }
-    
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-    
-        .menu ul li {
-            padding: 8px 0;
-        }
-    
-        .menu ul li a {
-            text-decoration: none;
-            color: black;
-            display: block;
-            padding: 6px;
-            border-radius: 4px;
-        }
-    
-        .menu ul li a:hover {
-            background-color: #f0f0f0;
+            height: 2px;
         }
     
         main {
-            margin-top: 40px;
+            margin-top: 30px;
         }
-    
-        @media (max-width: 600px) {
-            .top-bar {
-                height: 30px;
-                padding: 0 10px;
-            }
-    
-            .menu-icon {
-                width: 20px;
-                height: 12px;
-            }
-    
-            .bar {
-                height: 2px;
-            }
-    
-            main {
-                margin-top: 30px;
-            }
-        }
+    }
     </style>
     
     <script>
-        const carouselInner = document.querySelector('.carousel-inner');
-        const totalSlides = document.querySelectorAll('.carousel-item').length;
-        let index = 0;
+    let lastScrollTop = 0;
+    const topBar = document.querySelector('.top-bar');
     
-        function showSlide(n) {
-            if (n >= totalSlides) {
-                carouselInner.style.transition = 'none';
-                index = 0;
-                carouselInner.style.transform = `translateX(${-index * 100}%)`;
-                setTimeout(() => {
-                    carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                    showSlide(index + 1);
-                }, 50);
-                return;
-            } else if (n < 0) {
-                carouselInner.style.transition = 'none';
-                index = totalSlides / 2 - 1;
-                carouselInner.style.transform = `translateX(${-index * 100}%)`;
-                setTimeout(() => {
-                    carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                    showSlide(index + 1);
-                }, 50);
-                return;
-            }
-            index = n;
-            carouselInner.style.transform = `translateX(${-index * 100}%)`;
+    window.addEventListener('scroll', function() {
+        let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+        if (currentScrollTop > lastScrollTop) {
+            topBar.classList.add('hidden');
+        } else {
+            topBar.classList.remove('hidden');
         }
     
-        setInterval(() => showSlide(index + 1), 5000);
-    
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuToggle = document.getElementById('menu-toggle');
-            var menu = document.getElementById('menu');
-    
-            menuToggle.addEventListener('click', function() {
-                menu.classList.toggle('open');
-            });
-        });
+        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+    });
     </script>
-    ```
-</body>
-</html>
-
-
+    
+    <script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+    let index = 0;
+    
+    function showSlide(n) {
+        if (n >= totalSlides) {
+            carouselInner.style.transition = 'none';
+            index = 0;
+            carouselInner.style.transform = `translateX(${-index * 100}%)`;
+            setTimeout(() => {
+                carouselInner.style.transition = 'transform 0.5s ease-in-out';
+                showSlide(index + 1);
+            }, 50);
+            return;
+        } else if (n < 0) {
+            carouselInner.style.transition = 'none';
+            index = totalSlides / 2 - 1;
+            carouselInner.style.transform = `translateX(${-index * 100}%)`;
+            setTimeout(() => {
+                carouselInner.style.transition = 'transform 0.5s ease-in-out';
+                showSlide(index + 1);
+            }, 50);
+            return;
+        }
+        index = n;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+    }
+    
+    setInterval(() => showSlide(index + 1), 5000);
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.getElementById('menu-toggle');
+        var menu = document.getElementById('menu');
+    
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('open');
+        });
+    });
+    </script>
+    

@@ -532,31 +532,6 @@ width: 260px;
     display: none; 
 }
 
- 
-.carousel {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.carousel-inner {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-item {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .image-row {
   display: flex;
   overflow-x: auto;

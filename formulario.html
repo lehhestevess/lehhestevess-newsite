@@ -41,6 +41,30 @@
             <button type="submit" id="submit-button">Enviar</button>
         </form>
     </div>  
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+            var textarea = document.getElementById('sugestoes');
+            var errorSpan = document.getElementById('sugestoes-error');
+          
+            var wordLimit = 10;
+            var words = textarea.value.trim().split(/\s+/);
+            
+            if (words.length > wordLimit) {
+    
+                event.preventDefault();
+                
+       
+                errorSpan.textContent = 'Você pode inserir no máximo ' + wordLimit + ' palavras.';
+                errorSpan.style.display = 'block';
+                textarea.focus();
+            } else {
+    
+                errorSpan.style.display = 'none';
+            }
+        });
+        </script>
+
 </body>
 </html>
 
