@@ -472,9 +472,7 @@ width: 260px;
     padding: 20px;
   }
   
-  .recommendation {
-    
-  }
+
   
   @media (max-width: 767px) {
     #series, .container {
@@ -509,8 +507,6 @@ width: 260px;
   
   
   
-  
-<<<<<<< HEAD
   @media only screen and (max-width: 600px) {
   .image-row img {
   width: 260px;
@@ -537,10 +533,6 @@ width: 260px;
 }
 
  
- 
-Claro, aqui está o código sem as partes comentadas:
-
-```css
 .carousel {
   position: relative;
   width: 100%;
@@ -645,4 +637,3 @@ Claro, aqui está o código sem as partes comentadas:
   background-color: #555;
   border-radius: 3px;
 }
-```
