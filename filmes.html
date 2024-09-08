@@ -37,21 +37,18 @@
       <div class="carousel">
         <div class="carousel-inner">
             <div class="carousel-item">
-                <img src="https://i.postimg.cc/1XCQrWR3/f5be1620-7374-4205-969e-39b8e57f179d.jpg" alt="Imagem 1">
+                <img src="https://i.postimg.cc/JhjBrMvb/z-apenaws.jpg" alt="Imagem 1">
             </div>
             <div class="carousel-item">
-                <img src="https://i.postimg.cc/hPr7W39j/b85be91c-1e96-4e6c-b759-3e7691468862.jpg" alt="Imagem 2">
+                <img src="https://i.postimg.cc/vTyZByrV/cdfa4344-837d-4fcd-bff7-a51331ced5a1.jpg" alt="Imagem 2">
             </div>
             <div class="carousel-item">
-                <img src="https://i.postimg.cc/KYV8xHrh/fa5910b7-34e4-435e-9046-14992522443d.jpg" alt="Imagem 3">
+                <img src="https://i.postimg.cc/QCxmXdDV/1666.jpg" alt="Imagem 3">
             </div>
             <!---->
             <div class="carousel-item">
-              <img src="https://i.postimg.cc/Dynh1Txw/6c8f7575-ff02-4f65-94d8-9ada2b127ae0.jpg" alt="Imagem 1">
+              <img src="https://i.postimg.cc/dVH52mVW/jj.jpg" alt="Imagem 1">
           </div>
-          <div class="carousel-item">
-            <img src="https://i.postimg.cc/1XCQrWR3/f5be1620-7374-4205-969e-39b8e57f179d.jpg" alt="Imagem 1">
-        </div>
         </div>
     </div>
     
@@ -372,153 +369,169 @@
 
     <style>
       .carousel {
-        position: relative;
-        width: 100%;
-        max-width: 1900px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 10px;
+          position: relative;
+          width: 100%;
+          max-width: 1900px;
+          margin: 0 auto;
+          overflow: hidden;
+          border-radius: 10px;
       }
-    
+      
       .carousel-inner {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
+          display: flex;
+          transition: transform 0.5s ease-in-out;
       }
-    
+      
       .carousel-item {
-        min-width: 100%;
-        box-sizing: border-box;
+          min-width: 100%;
+          box-sizing: border-box;
       }
-    
+      
       .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
       }
-    
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-      }
-    
-      .top-bar {
-        background-color: rgb(0, 0, 0);
-        height: 40px;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-        box-sizing: border-box;
-        transition: transform 0.3s ease;
-      }
-    
-      .top-bar-content {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-      }
-    
-      .top-bar-image {
-        height: 90px;
-        margin-right: 10px;
-      }
-    
-      .top-bar-text {
-        font-size: 16px;
-        color: white;
-      }
-    
-      .top-bar.hidden {
-        transform: translateY(-100%);
-      }
-    
-      .menu-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 25px;
-        height: 15px;
-        cursor: pointer;
-      }
-    
-      .bar {
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        border-radius: 2px;
-      }
-    
-      .menu {
-        position: fixed;
-        top: 40px;
-        left: -180px;
-        width: 180px;
-        height: auto;
-        max-height: 90%;
-        background-color: white;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-        transition: left 0.3s ease;
-        overflow-y: auto;
-        padding: 10px;
-        z-index: 999;
-        box-sizing: border-box;
-      }
-    
-      .menu.open {
-        left: 0;
-      }
-    
-      .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-    
-      .menu ul li {
-        padding: 8px 0;
-      }
-    
-      .menu ul li a {
-        text-decoration: none;
-        color: black;
-        display: block;
-        padding: 6px;
-        border-radius: 4px;
-      }
-    
-      .menu ul li a:hover {
-        background-color: #f0f0f0;
-      }
-    
-      main {
-        margin-top: 40px;
-      }
-    
+      
       @media (max-width: 600px) {
-        .top-bar {
-          height: 30px;
-          padding: 0 10px;
-        }
-    
-        .menu-icon {
-          width: 20px;
-          height: 12px;
-        }
-    
-        .bar {
-          height: 2px;
-        }
-    
-        main {
-          margin-top: 30px;
-        }
+          .carousel-item img {
+              content: url('https://i.postimg.cc/L80KdVQP/z-guerra.jpg'); 
+          }
+          .carousel-item:nth-child(2) img {
+              content: url('https://i.postimg.cc/2yQpWRwR/por-lugares.png'); 
+          }
+          .carousel-item:nth-child(3) img {
+              content: url('https://i.postimg.cc/x1C0w85X/rua-do-medo.jpg'); 
+          }
+          .carousel-item:nth-child(4) img {
+              content: url('https://i.postimg.cc/X7D6bKQ9/frat.jpg');
+          }
       }
-    </style>
+      
+      body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+      }
+      
+      .top-bar {
+          background-color: rgb(0, 0, 0);
+          height: 40px;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1000;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          box-sizing: border-box;
+          transition: transform 0.3s ease;
+      }
+      
+      .top-bar-content {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+      }
+      
+      .top-bar-image {
+          height: 90px;
+          margin-right: 10px;
+      }
+      
+      .top-bar-text {
+          font-size: 16px;
+          color: white;
+      }
+      
+      .top-bar.hidden {
+          transform: translateY(-100%);
+      }
+      
+      .menu-icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 25px;
+          height: 15px;
+          cursor: pointer;
+      }
+      
+      .bar {
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          border-radius: 2px;
+      }
+      
+      .menu {
+          position: fixed;
+          top: 40px;
+          left: -180px;
+          width: 180px;
+          height: auto;
+          max-height: 90%;
+          background-color: white;
+          box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+          transition: left 0.3s ease;
+          overflow-y: auto;
+          padding: 10px;
+          z-index: 999;
+          box-sizing: border-box;
+      }
+      
+      .menu.open {
+          left: 0;
+      }
+      
+      .menu ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+      
+      .menu ul li {
+          padding: 8px 0;
+      }
+      
+      .menu ul li a {
+          text-decoration: none;
+          color: black;
+          display: block;
+          padding: 6px;
+          border-radius: 4px;
+      }
+      
+      .menu ul li a:hover {
+          background-color: #f0f0f0;
+      }
+      
+      main {
+          margin-top: 40px;
+      }
+      
+      @media (max-width: 600px) {
+          .top-bar {
+              height: 30px;
+              padding: 0 10px;
+          }
+      
+          .menu-icon {
+              width: 20px;
+              height: 12px;
+          }
+      
+          .bar {
+              height: 2px;
+          }
+      
+          main {
+              margin-top: 30px;
+          }
+      }
+      </style>
+      
     
     <script>
       let lastScrollTop = 0;
