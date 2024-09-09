@@ -5,8 +5,8 @@ body {
   text-align: center;
   background-image: url('https://i.postimg.cc/jdrgLHhF/preto-fundo.png'); 
   background-size: cover; 
-  background-position: center; /
-  background-repeat: no-repeat; /
+  background-position: center; 
+  background-repeat: no-repeat; 
   font-family: Arial, sans-serif;
   margin: 0px; }
   
@@ -105,7 +105,7 @@ body {
   header {
   background-color: #6b02026c;
   color: #ffffff;
-  padding: 70px;
+  padding: 80px;
   text-align: center;
   background-image: url('https://i.postimg.cc/1tzK7QgZ/baaaaaner.jpg');
   background-position: center; /
@@ -188,7 +188,7 @@ width: 260px;
   }
   
   .os-melhores img {
-  max-width: 260px;
+  max-width: 270px;
   height: auto;
   }
   
@@ -199,7 +199,7 @@ width: 260px;
   text-align: center;
   }
   
-  form {
+  /*  form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -317,7 +317,8 @@ width: 260px;
       margin: 20px;
       text-align: center;
   }
-  
+  */
+
   .netflix-button {
     display: flex;
     align-items: center;

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Meu Site de Recomendações</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://i.postimg.cc/2SYzTJ67/jjjj.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box; 
+        }
+        .content {
+            max-width: 90%;
+            color: #fff;
+        }
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .btn-start {
+            font-size: 1.25rem;
+            padding: 1rem 2rem;
+            color: #fff;
+            background-color: #e50914;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .btn-start:hover {
+            background-color: #f40612;
+        }
+        @media (max-width: 1024px) {
+            .content h1 {
+                font-size: 2.25rem;
+            }
+            .btn-start {
+                font-size: 1.125rem;
+                padding: 0.875rem 1.75rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2rem;
+            }
+            .btn-start {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 1.5rem;
+            }
+            .btn-start {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="content">
+            <h1>Esse é um site de Recomendações</h1>
+            <a href="index.html" class="btn-start" id="startButton">Começar</a>
+        </div>
+    </div>
+    <audio id="clickSound" src="click-sound.mp3"></audio>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function(event) {
+            event.preventDefault();
+            var clickSound = document.getElementById('clickSound');
+            clickSound.play();
+            document.body.style.opacity = 0; 
+            setTimeout(function() {
+                window.location.href = 'index.html'; 
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

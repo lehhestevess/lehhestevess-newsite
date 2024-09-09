@@ -3,68 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
     <title>Formulário de contato</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <br>
-    <h1>Entre em Contato</h1>
-    <br>
-    <div class="form-container">
-        <form id="form">
-            <h2>Informações de contato</h2>
-            <form action="https://formspree.io/f/manwwydn" method="post">
+    <div class="top-bar">
+        <div class="menu-icon" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="top-bar-content">
+            <img src="https://i.postimg.cc/fL7S56Dt/Black-and-White-Circle-Business-Logo-removebg-preview-1.png" alt="Descrição da Imagem" class="top-bar-image">
+            <span class="top-bar-text">Movie Fusion</span>
+        </div>
+    </div>
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#series">Séries</a></li>
+            <li><a href="filmes.html">Filmes</a></li>
+            <li><a href="formulario.html">Formulário de Contato</a></li>
+        </ul>
+    </nav>
     
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <span id="nome-error" class="error-message"></span>
-            </div>
-    
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                <span id="email-error" class="error-message"></span>
-            </div>
-    
-            <div class="form-group">
-                <label for="sugestoes">Sugestões:</label>
-                <textarea id="sugestoes" name="sugestoes" rows="4" placeholder="Digite suas sugestões aqui..."></textarea>
-                <span id="sugestoes-error" class="error-message"></span>
-            </div>
-    
-            <button type="submit" id="submit-button">Enviar</button>
-        </form>
-    </div>  
+    <div class="container">
+        <h1>Entre em Contato</h1>
+        <div class="form-container">
+            <form id="form" action="https://formspree.io/f/manwwydn" method="post">
+                <h2>Informações de contato</h2>
 
-    <script>
-        document.getElementById('form').addEventListener('submit', function(event) {
-            var textarea = document.getElementById('sugestoes');
-            var errorSpan = document.getElementById('sugestoes-error');
-          
-            var wordLimit = 10;
-            var words = textarea.value.trim().split(/\s+/);
-            
-            if (words.length > wordLimit) {
-    
-                event.preventDefault();
-                
-       
-                errorSpan.textContent = 'Você pode inserir no máximo ' + wordLimit + ' palavras.';
-                errorSpan.style.display = 'block';
-                textarea.focus();
-            } else {
-    
-                errorSpan.style.display = 'none';
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <span id="nome-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="sugestoes">Sugestões:</label>
+                    <textarea id="sugestoes" name="sugestoes" rows="4" placeholder="Digite suas sugestões aqui..."></textarea>
+                    <span id="sugestoes-error" class="error-message"></span>
+                </div>
+
+                <button type="submit" id="submit-button">Enviar</button>
+            </form>
+        </div>  
+    </div>
+
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.postimg.cc/GpZHCSbT/glare.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 400px;
+            width: 90%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #494949;
+        }
+
+        form {
+            max-width: 100%;
+        }
+
+        form h2 {
+            margin-top: 0;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000000;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:invalid, textarea:invalid {
+            border-color: #ffffff;
+        }
+
+        .error-message {
+            color: #d9534f;
+            font-size: 0.875em;
+            display: none;
+        }
+
+        button {
+            background-color: #990000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #d53131;
+        }
+
+        @media (max-width: 600px) {
+            body, html {
+                height: 100%;
+                margin: 0;
             }
-        });
-        </script>
+            
+            .container {
+                height: 100vh;
+                padding: 20px;
+            }
+            
+            .form-container {
+                padding: 20px;
+                border-radius: 10px;
+                background-color: #494949;
+            }
+        }
+        .top-bar {
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
 
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.top-bar-image {
+    height: 90px;
+    margin-right: 10px;
+}
+
+.top-bar-text {
+    font-size: 16px;
+    color: white;
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%);
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.menu {
+    position: fixed;
+    top: 40px;
+    right: -180px;
+    width: 180px;
+    height: auto;
+    max-height: 90%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 10px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.menu.open {
+    right: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 8px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        height: 30px;
+        padding: 0 10px;
+    }
+
+    .menu-icon {
+        width: 20px;
+        height: 12px;
+    }
+
+    .bar {
+        height: 2px;
+    }
+
+    main {
+        margin-top: 30px;
+    }
+}
+ </style>
+
+<script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+    let index = 0;
+    
+    function showSlide(n) {
+        if (n >= totalSlides) {
+            carouselInner.style.transition = 'none';
+            index = 0;
+            carouselInner.style.transform = `translateX(${-index * 100}%)`;
+            setTimeout(() => {
+                carouselInner.style.transition = 'transform 0.5s ease-in-out';
+                showSlide(index + 1);
+            }, 50);
+            return;
+        } else if (n < 0) {
+            carouselInner.style.transition = 'none';
+            index = totalSlides / 2 - 1;
+            carouselInner.style.transform = `translateX(${-index * 100}%)`;
+            setTimeout(() => {
+                carouselInner.style.transition = 'transform 0.5s ease-in-out';
+                showSlide(index + 1);
+            }, 50);
+            return;
+        }
+        index = n;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+    }
+    
+    setInterval(() => showSlide(index + 1), 5000);
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.getElementById('menu-toggle');
+        var menu = document.getElementById('menu');
+    
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('open');
+        });
+    });
+    </script>
+    
 </body>
 </html>
-
