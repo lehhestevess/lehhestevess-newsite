@@ -62,12 +62,95 @@
         
       </nav>
     
+      <style>
+.o-youtube-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.o-youtube {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 0 40px; 
+}
+
+.o-youtube a {
+    flex: 0 0 auto;
+}
+
+.o-youtube iframe {
+    width: 300px;
+    height: 200px;
+    border: none;
+    scroll-snap-align: start;
+}
+
+.scroll-button {
+    background: rgba(0, 0, 0, 0.3); 
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%; 
+    font-size: 18px;
+    transition: background 0.3s; 
+}
+
+.scroll-button:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.scroll-left {
+    position: absolute;
+    left: 10px; 
+}
+
+.scroll-right {
+    position: absolute;
+    right: 10px;
+}
+
+    </style>
+
+    <script>
+      document.querySelector('.scroll-left').addEventListener('click', function() {
+    document.querySelector('.o-youtube').scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+document.querySelector('.scroll-right').addEventListener('click', function() {
+    document.querySelector('.o-youtube').scrollBy({ left: 300, behavior: 'smooth' });
+});
+
+  </script>
+
+<br>
+
       <main>
         <section id="documentários">
 
        
-    <h1>Documentários Criminais</h1>
-    <hr class="linha-divisao">
+  
+
+
+    <div class="o-youtube">
+      <img src="https://i.postimg.cc/RFLpppFb/image9-removebg-preview.png" alt="Série 13">
+  </div>
+  
+  <div class="o-youtube">
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/bmc_ABmdZF4?si=B3ufBGxq7V4FW8WB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/nJjZCqRYCM8?si=78mA_0KnD_9WZNLS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID4" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/E2tG0naFErE?si=hjdZFHU3ec11gZLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID5" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/gSpMK8btsHY?si=jV-p-VsLmQB3CT23" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <a href="https://www.youtube.com/watch?v=VIDEO_ID6" target="_blank"><iframe src="https://www.youtube.com/embed/VIDEO_ID6" allowfullscreen></iframe></a>
+      <!---->
+  </div>
+
+  <hr class="linha-divisao">
+  <h1>Documentários Criminais</h1>
     <section id="doramas">
       <div class="container">
         <div class="recommendation">

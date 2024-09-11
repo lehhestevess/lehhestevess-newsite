@@ -613,3 +613,12 @@ width: 260px;
   background-color: #555;
   border-radius: 3px;
 }
+
+.o-youtube{
+  text-align: left;
+  }
+  
+  .o-youtube img {
+    max-width: 100px;
+    height: auto;
+    }
