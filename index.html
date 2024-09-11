@@ -12,11 +12,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden; 
+            opacity: 1; 
+            transition: opacity 0.5s ease; 
+        }
+        body.dissolve {
+            opacity: 0; 
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('https://i.postimg.cc/2SYzTJ67/jjjj.jpg') no-repeat center center fixed;
             background-size: cover;
-            font-family: Arial, sans-serif;
-            transition: opacity 1s ease-in-out;
-            opacity: 1;
+            filter: brightness(50%);
+            z-index: -1;
         }
         .overlay {
             position: absolute;
@@ -24,13 +39,27 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.5); 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 1rem;
-            box-sizing: border-box; 
+            box-sizing: border-box;
+        }
+        .logo {
+            margin-bottom: 1rem;
+        }
+        .logo img {
+            max-width: 150px; 
+            height: auto;
+        }
+        .logo-caption {
+            color: #fff;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            font-style: italic;
         }
         .content {
             max-width: 90%;
@@ -40,6 +69,16 @@
             font-size: 2.5rem;
             margin-bottom: 1rem;
             line-height: 1.2;
+        }
+        .content p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+        .slogan {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: #ffd700; 
         }
         .btn-start {
             font-size: 1.25rem;
@@ -56,53 +95,147 @@
         .btn-start:hover {
             background-color: #f40612;
         }
-        @media (max-width: 1024px) {
-            .content h1 {
-                font-size: 2.25rem;
-            }
-            .btn-start {
-                font-size: 1.125rem;
-                padding: 0.875rem 1.75rem;
-            }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.875rem;
+            color: #ddd;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .menu-hamburger {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .menu-hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -250px; 
+            width: 250px; 
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            overflow: hidden;
+            transition: 0.3s;
+            z-index: 1000;
+            padding-top: 60px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        }
+        .menu.active {
+            left: 0;
+        }
+        .menu a {
+            display: block;
+            padding: 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            text-align: left; 
+            border-bottom: 1px solid #444; 
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+        .menu-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
         }
         @media (max-width: 768px) {
-            .content h1 {
-                font-size: 2rem;
+            .menu {
+                width: 200px;
             }
-            .btn-start {
-                font-size: 1rem;
-                padding: 0.75rem 1.5rem;
+            .menu a {
+                font-size: 0.875rem;
+                padding: 0.75rem;
+            }
+            .menu-close {
+                font-size: 1.25rem;
             }
         }
         @media (max-width: 480px) {
-            .content h1 {
-                font-size: 1.5rem;
+            .menu {
+                width: 180px; 
+                left: -180px; 
             }
-            .btn-start {
-                font-size: 0.875rem;
-                padding: 0.5rem 1rem;
+            .menu.active {
+                left: 0;
+            }
+            .menu a {
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
+            .menu-close {
+                font-size: 1rem;
+            }
+            .menu-hamburger div {
+                width: 25px;
+                height: 2.5px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="menu-hamburger" id="hamburgerMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu" id="sideMenu">
+        <div class="menu-close" id="closeMenu">&times;</div>
+        <a href="inicio.html">Início</a>
+        <a href="filmes.html">Filmes</a>
+        <a href="animação.html">Animações</a>
+        <a href="DocumentáriosCriminais.html">Criminal</a>
+        <a href="formulario.html">Contato</a>
+      
+    </div>
     <div class="overlay">
+        <div class="logo">
+            <img src="https://i.postimg.cc/7bvHHkSK/huihuuhuhuguyguygg-removebg-preview.png" alt="Logo do Site">
+            <div class="logo-caption">Movie Fusion</div>
+        </div>
         <div class="content">
-            <h1>Esse é um site de Recomendações</h1>
+            <h1>Bem-vindo ao Site de Recomendações</h1>
+            <p>Descubra as melhores opções para assistir hoje. Clique na imagem e assista aos trailers ou clique na plataforma abaixo e assista completo!</p>
+            <div class="slogan">Encontre sua próxima maratona!</div>
             <a href="inicio.html" class="btn-start" id="startButton">Começar</a>
         </div>
+        <div class="footer">
+            <p>&copy; 2024 Meu Site de Recomendações | <a href="formulario.html">Contato</a></p>
+        </div>
     </div>
-    <audio id="clickSound" src="click-sound.mp3"></audio>
     <script>
+        document.getElementById('hamburgerMenu').addEventListener('click', function() {
+            document.getElementById('sideMenu').classList.toggle('active');
+        });
+        document.getElementById('closeMenu').addEventListener('click', function() {
+            document.getElementById('sideMenu').classList.remove('active');
+        });
         document.getElementById('startButton').addEventListener('click', function(event) {
             event.preventDefault();
-            var clickSound = document.getElementById('clickSound');
-            clickSound.play();
-            document.body.style.opacity = 0; 
+            
+            document.body.classList.add('dissolve');
             setTimeout(function() {
                 window.location.href = 'inicio.html'; 
-            }, 1000);
+            }, 500); 
         });
     </script>
 </body>
 </html>
+

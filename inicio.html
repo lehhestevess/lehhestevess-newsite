@@ -2,25 +2,105 @@
 <html lang="pt">
 
 <head>
-
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> (Letícia) Recomendações - Filmes e Séries </title>
+  <title>(Letícia) Recomendações - Filmes e Séries</title>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
 
   <script>
     document.getElementById('menu').addEventListener('change', function() {
-        alert('Você selecionou: ' + this.value);
+      alert('Você selecionou: ' + this.value);
     });
-</script>
+  </script>
 
- 
+  <style>
+    .streaming-container {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .more-options-button {
+      margin-right: 10px;
+      cursor: pointer;
+      background-color: #d3d3d3;
+      border: none;
+      color: #000000;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .streaming-link {
+      margin-right: 10px;
+    }
+
+    .streaming-link img {
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    .more-apps {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      overflow-x: auto;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .hidden {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .more-apps.visible {
+      max-height: 1000px;
+    }
+
+    .more-apps a {
+      margin-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .more-options-button {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+      }
+
+      .streaming-link img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .more-options-button {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .streaming-link img {
+        max-width: 40px;
+        max-height: 40px;
+      }
+    }
+  </style>
 </head>
-<body>
 
-   <header>
+<body>
+  <header>
     <h1></h1>
   </header>
 
@@ -29,38 +109,70 @@
     <a href="filmes.html">Filmes</a>
     <a href="DocumentáriosCriminais.html">Documentários</a>
     <a href="animação.html">Animações</a>
-    
   </nav>
-<br/>
+  <br/>
 
+  <div class="streaming-container">
+    <button class="more-options-button" aria-label="Mais opções" onclick="toggleMoreApps()">+</button>
+    <a href="https://www.primevideo.com" target="_blank" class="streaming-link">
+      <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Amazon Prime Video" class="streaming-icon">
+    </a>
+    <a href="https://www.netflix.com" target="_blank" class="streaming-link">
+      <img src="https://i.postimg.cc/wjvpBHzr/baixados-removebg-preview.png" alt="Netflix" class="streaming-icon">
+    </a>
+    <a href="https://www.hbomax.com" target="_blank" class="streaming-link">
+      <img src="https://i.postimg.cc/rpM54hh7/hbo-max-removebg-preview-2.png" alt="HBO Max" class="streaming-icon">
+    </a>
+    <div class="more-apps hidden">
+      <a href="https://www.disneyplus.com" target="_blank" class="streaming-link">
+        <img src="https://i.postimg.cc/FFytNMfP/diss-removebg-preview.png" alt="Disney+" class="streaming-icon">
+      </a>
+      <a href="https://globoplay.globo.com/" target="_blank" class="streaming-link">
+        <img src="https://i.postimg.cc/qRQ8GBbb/globoplay-removebg-preview.png" alt="Globoplay" class="streaming-icon">
+      </a>
+      <a href="https://www.apple.com/tv/" target="_blank" class="streaming-link">
+        <img src="https://i.postimg.cc/Yq8SRnHS/tv-removebg-preview.png" alt="Apple TV+" class="streaming-icon">
+      </a>
+    </div>
+  </div>
 
-<div class="streaming-container">
-  <a href="https://www.netflix.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Netflix" class="streaming-icon">
-  </a>
-  <a href="https://www.primevideo.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/wjvpBHzr/baixados-removebg-preview.png" alt="Amazon Prime Video" class="streaming-icon">
-  </a>
-  <a href="https://www.disneyplus.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/rpM54hh7/hbo-max-removebg-preview-2.png" alt="Disney+" class="streaming-icon">
-  </a>
-  <button class="more-options-button" aria-label="Mais opções">+</button>
-</div>
+  <script>
+    function toggleMoreApps() {
+      var moreApps = document.querySelector('.more-apps');
+      var moreOptionsButton = document.querySelector('.more-options-button');
 
-<div class="more-apps hidden">
-  <a href="https://www.hbomax.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/7Y8L1p9B/hbo-max-logo.png" alt="HBO Max" class="streaming-icon">
-  </a>
-  <a href="https://www.hulu.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/8ch1ngPg/hulu-logo.png" alt="Hulu" class="streaming-icon">
-  </a>
- 
-</div>
+      if (moreApps.classList.contains('hidden')) {
+        moreApps.classList.remove('hidden');
+        moreApps.classList.add('visible');
+        moreOptionsButton.textContent = '-';
+      } else {
+        moreApps.classList.remove('visible');
+        moreApps.classList.add('hidden');
+        moreOptionsButton.textContent = '+';
+      }
+    }
 
-<div class="os-melhores">
-  <img src="https://i.postimg.cc/c4fPmj3L/image.jpg" alt="Série 13">
-</div>
-  
+    function adjustLayout() {
+      var moreApps = document.querySelector('.more-apps');
+      var moreOptionsButton = document.querySelector('.more-options-button');
+      if (window.innerWidth >= 1024) {
+        moreApps.classList.remove('hidden');
+        moreApps.classList.add('visible');
+        moreOptionsButton.textContent = '-';
+      } else {
+        moreApps.classList.add('hidden');
+        moreOptionsButton.textContent = '+';
+      }
+    }
+
+    window.addEventListener('load', adjustLayout);
+    window.addEventListener('resize', adjustLayout);
+  </script>
+
+  <div class="os-melhores">
+    <img src="https://i.postimg.cc/c4fPmj3L/image.jpg" alt="Série 13">
+  </div>
+
   <div class="image-row">
     <a href="link1.html"><img src="https://i.postimg.cc/BQ3T7KqS/anne.jpg" alt="Imagem 1"></a>
     <a href="link2.html"><img src="https://i.postimg.cc/SQ9bB1Rd/lugares-incrivris-rolagem.jpg" alt="Imagem 2"></a>
@@ -72,16 +184,18 @@
     <a href="link2.html"><img src="https://i.postimg.cc/MGjSmzc7/rolagem-cobra-kai.jpg" alt="Imagem 8"></a>
     <a href="link3.html"><img src="https://i.postimg.cc/NfJvhKm8/rolagem-ginny.jpg" alt="Imagem 9"></a>
     <a href="link3.html"><img src="https://i.postimg.cc/Gm6026MH/rolagem-you.jpg" alt="Imagem 10"></a>
-     <a href="link2.html"><img src="https://i.postimg.cc/Y0bTGxdR/eli.jpg" alt="Imagem 5"></a>
+    <a href="link2.html"><img src="https://i.postimg.cc/Y0bTGxdR/eli.jpg" alt="Imagem 5"></a>
     <a href="link3.html"><img src="https://i.postimg.cc/PJs9fhJ4/all-of-us-are-rolagem.jpg" alt="Imagem 6"></a>
     <a href="link1.html"><img src="https://i.postimg.cc/sg4Vt6nq/fabricante-de-lagrimas.jpg" alt="Imagem 7"></a>
     <a href="link2.html"><img src="https://i.postimg.cc/SQ9bB1Rd/lugares-incrivris-rolagem.jpg" alt="Imagem 8"></a>
     <a href="link3.html"><img src="https://i.postimg.cc/SRM1Vh5x/alice.jpg" alt="Imagem 9"></a>
     <a href="link3.html"><img src="https://i.postimg.cc/PJs9fhJ4/all-of-us-are-rolagem.jpg" alt="Imagem 10"></a>
-    
   </div>
 
-    <main>
+  <main>
+  </main>
+
+
       <section id="series">
         
        
