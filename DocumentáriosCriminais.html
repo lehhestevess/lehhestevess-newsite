@@ -21,6 +21,62 @@
         <span class="top-bar-text">Movie Fusion</span>
     </div>
 </div>
+
+<style>
+  .munuuujk {
+    background: linear-gradient(135deg, #000000, #333333);
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #000;
+    text-align: center;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+  }
+
+  .munuuujk ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento reduzido entre itens */
+    flex-wrap: nowrap; /* Garante que os itens não quebrem para a linha seguinte */
+  }
+
+  .munuuujk li {
+    margin: 0;
+  }
+
+  .munuuujk a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 16px; /* Ajustado para telas menores */
+    font-weight: 500;
+    padding: 8px 16px; /* Ajustado para telas menores */
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+
+  .munuuujk a:hover {
+    background-color: #444444;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Estilo para telas pequenas (celulares) */
+  @media (max-width: 600px) {
+    .munuuujk {
+      padding: 10px; /* Ajuste do padding para telas pequenas */
+    }
+    .munuuujk a {
+      font-size: 14px; /* Tamanho de fonte ainda menor */
+      padding: 6px 12px; /* Ajuste adicional de padding */
+    }
+  }
+</style>
+
 <nav id="menu" class="menu">
     <ul>
         <li><a href="index.html">Movie Fusion</a></li>
@@ -52,6 +108,7 @@
       <div class="carousel-item">
         <img src="https://i.postimg.cc/1XCQrWR3/f5be1620-7374-4205-969e-39b8e57f179d.jpg" alt="Imagem 1">
     </div>
+
     </div>
 </div>
 

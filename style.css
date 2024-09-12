@@ -132,7 +132,7 @@ body {
   .image-row {
   display: flex;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: hidden; */
   white-space: nowrap;
   position: relative;
   width: calc(100% - 20px);
