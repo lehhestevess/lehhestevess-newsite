@@ -112,12 +112,74 @@
     </div>
 </div>
 
-    <nav>
-        <a href="inicio.html">Séries</a>
-        <a href="filmes.html">Filmes</a>
-        <a href="animação.html">Animações</a>
-        
-      </nav>
+<style>
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+
+  .munuuujk {
+      background: linear-gradient(135deg, #000000, #2a2a2a 50%, #2a2a2a 50%, #000000);
+      padding: 10px;
+      margin-top: 0;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      border: 1px solid #000;
+      text-align: center;
+      overflow-x: hidden;
+  }
+
+  .munuuujk ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: nowrap;
+  }
+
+  .munuuujk li {
+      margin: 0;
+  }
+
+  .munuuujk a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 12px;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+
+  .munuuujk a:hover {
+      background-color: #555555;
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  @media (max-width: 600px) {
+      .munuuujk {
+          padding: 8px;
+      }
+      .munuuujk a {
+          font-size: 14px;
+          padding: 6px 12px;
+      }
+  }
+</style>
+
+<div class="munuuujk">
+  <ul>
+      <li><a href="inicio.html">Início</a></li>
+      <li><a href="filmes.html">Filmes</a></li>
+      <li><a href="inicio.html#series">Séries</a></li>
+      <li><a href="animação.html">Animações</a></li>
+  </ul>
+</div>
+
     
       <style>
 .o-youtube-container {
@@ -197,6 +259,7 @@ document.querySelector('.scroll-right').addEventListener('click', function() {
       <img src="https://i.postimg.cc/RFLpppFb/image9-removebg-preview.png" alt="Série 13">
   </div>
   
+  <hr class="linha-divisao">
   <div class="o-youtube">
       <a href="https://www.youtube.com/watch?v=VIDEO_ID1" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/bmc_ABmdZF4?si=B3ufBGxq7V4FW8WB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <a href="https://www.youtube.com/watch?v=VIDEO_ID2" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/nJjZCqRYCM8?si=78mA_0KnD_9WZNLS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -207,6 +270,7 @@ document.querySelector('.scroll-right').addEventListener('click', function() {
   </div>
 
   <hr class="linha-divisao">
+  <br>
   <h1>Documentários Criminais</h1>
     <section id="doramas">
       <div class="container">
