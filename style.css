@@ -641,3 +641,83 @@ width: 260px;
     max-width: 100%; 
   }
 }
+
+.dora img {
+  max-width: 250px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .dora {
+    text-align: center; 
+  }
+  
+  .dora img {
+    max-width: 60%; 
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  filter: brightness(80%);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  width: calc(30vw - 30px);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  z-index: 1;
+  max-height: 20%;
+  overflow: hidden;
+  display: block;
+  text-align: left;
+}
+
+.caption-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  margin: 0 0 5px;
+  font-weight: bold;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.caption-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+      display: none;
+  }
+}
