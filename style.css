@@ -182,7 +182,7 @@ width: 260px;
   }
   
   .os-melhores {
-  text-align: left;
+  text-align: center;
   }
   
   .os-melhores img {
@@ -468,7 +468,7 @@ width: 260px;
   
   .container {
     margin: 0;
-    padding: 40px;
+    padding: 50px;
   }
   
 
@@ -557,7 +557,7 @@ width: 260px;
 }
 
 .image-row img {
-  width: 195px;
+  width: 225px;
   margin-right: 10px;
   border-radius: 10px;
   transition: filter 0.3s ease;
@@ -623,7 +623,7 @@ width: 260px;
 
     
 .melhores {
-  text-align: left;
+  text-align: center;
 }
 
 .melhores img {
@@ -721,3 +721,4 @@ width: 260px;
       display: none;
   }
 }
+
