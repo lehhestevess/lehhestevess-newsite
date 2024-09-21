@@ -190,107 +190,33 @@
       }
   
       .streaming-container {
-          display: flex;
-          align-items: center;
-          overflow-x: auto;
-          padding: 10px;
-          box-sizing: border-box;
-          position: fixed; 
-          top: 0; 
-          right: 0; 
-          z-index: 10; 
-          background-color: rgba(0, 0, 0, 0.7);
-          border-radius: 5px; 
-      }
-  
-      .more-options-button {
-          margin-right: 10px;
-          cursor: pointer;
-          background-color: #d3d3d3;
-          border: none;
-          color: #000000;
-          font-size: 24px;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          text-align: center;
-          line-height: 40px;
-          font-weight: bold;
-          z-index: 1;
-      }
-  
-      .streaming-link {
-          margin-right: 10px;
-      }
-  
-      .streaming-link img {
-          max-width: 60px;
-          max-height: 60px;
-      }
-  
-      .more-apps {
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          overflow-x: auto;
-          transition: max-height 0.3s ease-out;
-      }
-  
-      .hidden {
-          max-height: 0;
-          overflow: hidden;
-      }
-  
-      .more-apps.visible {
-          max-height: 1000px;
-      }
-  
-      .more-apps a {
-          margin-left: 10px;
-      }
-  
-      @media (max-width: 768px) {
-          .more-options-button {
-              font-size: 20px;
-              width: 35px;
-              height: 35px;
-          }
-  
-          .streaming-link img {
-              max-width: 50px;
-              max-height: 50px;
-          }
-      }
-  
-      @media (max-width: 480px) {
-          .more-options-button {
-              font-size: 18px;
-              width: 30px;
-              height: 30px;
-          }
-  
-          .streaming-link img {
-              max-width: 40px;
-              max-height: 40px;
-          }
-      }
-  
-      .streaming-container {
-          width: auto; 
-          max-width: 100%;
-          height: auto;
-      }
-  
-     
-      @media (max-width: 767px) {
-          .streaming-container {
-              width: auto; 
-              max-width: 90%;
-              height: auto; 
-          }
-      }
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Permite arrastar horizontalmente */
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    z-index: 10; 
+    background-color: transparent; /* Fundo removido */
+    border-radius: 5px; 
+    width: auto; /* Largura original para desktop */
+    max-width: 100%; /* Garantir que não ultrapasse a tela */
+}
 
-      .more-options-button {
+@media (max-width: 767px) {
+    .streaming-container {
+        width: calc(100% - 20px); /* Largura total menos um pouco de padding */
+        left: 10%; /* Margem à esquerda para deslocar para a direita */
+        padding: 10px; /* Mantém o padding */
+        box-sizing: border-box; /* Garante que o padding não cause overflow */
+        padding-right: 30px; /* Adicionando padding à direita para evitar corte */
+        overflow-x: scroll; /* Permite arrastar horizontalmente no celular */
+    }
+}
+
+.more-options-button {
     margin-right: 10px;
     cursor: pointer;
     background-color: #d3d3d3;
@@ -305,27 +231,74 @@
     font-weight: bold;
     z-index: 1;
     transition: background-color 0.2s, box-shadow 0.2s;
-  }
+}
 
-  .more-options-button:hover {
+.more-options-button:hover {
     background-color: #b0b0b0; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .streaming-link {
+.streaming-link {
     margin-right: 10px;
-  }
+}
 
-  .streaming-link img {
+.streaming-link img {
     max-width: 60px;
     max-height: 60px;
     transition: transform 0.3s, box-shadow 0.2s;
-  }
+}
 
-  .streaming-link img:hover {
+.streaming-link img:hover {
     transform: scale(1.1); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  }
+}
+
+.more-apps {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow-x: auto; /* Mantém o overflow para desktop */
+    transition: max-height 0.3s ease-out;
+}
+
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.more-apps.visible {
+    max-height: 1000px;
+}
+
+.more-apps a {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .more-options-button {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .streaming-link img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .more-options-button {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .streaming-link img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
 
   </style>
   
