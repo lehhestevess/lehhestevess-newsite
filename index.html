@@ -192,27 +192,27 @@
       .streaming-container {
     display: flex;
     align-items: center;
-    overflow-x: auto; /* Permite arrastar horizontalmente */
+    overflow-x: auto; 
     padding: 10px;
     box-sizing: border-box;
     position: fixed; 
     top: 0; 
     right: 0; 
     z-index: 10; 
-    background-color: transparent; /* Fundo removido */
+    background-color: transparent; 
     border-radius: 5px; 
-    width: auto; /* Largura original para desktop */
-    max-width: 100%; /* Garantir que não ultrapasse a tela */
+    width: auto; 
+    max-width: 100%; 
 }
 
 @media (max-width: 767px) {
     .streaming-container {
-        width: calc(100% - 20px); /* Largura total menos um pouco de padding */
-        left: 10%; /* Margem à esquerda para deslocar para a direita */
-        padding: 10px; /* Mantém o padding */
-        box-sizing: border-box; /* Garante que o padding não cause overflow */
-        padding-right: 30px; /* Adicionando padding à direita para evitar corte */
-        overflow-x: scroll; /* Permite arrastar horizontalmente no celular */
+        width: calc(100% - 20px); 
+        left: 10%; 
+        padding: 10px; 
+        box-sizing: border-box; 
+        padding-right: 30px; 
+        overflow-x: scroll; 
     }
 }
 
@@ -257,7 +257,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    overflow-x: auto; /* Mantém o overflow para desktop */
+    overflow-x: auto; 
     transition: max-height 0.3s ease-out;
 }
 
@@ -299,6 +299,11 @@
         max-height: 40px;
     }
 }
+
+.rounded-border {
+            border-radius: 10px;
+            overflow: hidden; 
+        }
 
   </style>
   
@@ -342,29 +347,37 @@
     <div class="streaming-container">
         <button class="more-options-button" aria-label="Mais opções" onclick="toggleMoreApps()">+</button>
         <a href="https://www.primevideo.com" target="_blank" class="streaming-link">
-          <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Amazon Prime Video" class="streaming-icon">
+            <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Amazon Prime Video" class="streaming-icon">
         </a>
         <a href="https://www.netflix.com" target="_blank" class="streaming-link">
-          <img src="https://i.postimg.cc/wjvpBHzr/baixados-removebg-preview.png" alt="Netflix" class="streaming-icon">
+            <img src="https://i.postimg.cc/wjvpBHzr/baixados-removebg-preview.png" alt="Netflix" class="streaming-icon">
         </a>
         <a href="https://www.hbomax.com" target="_blank" class="streaming-link">
-          <img src="https://i.postimg.cc/rpM54hh7/hbo-max-removebg-preview-2.png" alt="HBO Max" class="streaming-icon">
+            <img src="https://i.postimg.cc/rpM54hh7/hbo-max-removebg-preview-2.png" alt="HBO Max" class="streaming-icon">
         </a>
         <div class="more-apps hidden">
-          <a href="https://www.disneyplus.com" target="_blank" class="streaming-link">
-            <img src="https://i.postimg.cc/FFytNMfP/diss-removebg-preview.png" alt="Disney+" class="streaming-icon">
-          </a>
-          <a href="https://globoplay.globo.com/" target="_blank" class="streaming-link">
-            <img src="https://i.postimg.cc/qRQ8GBbb/globoplay-removebg-preview.png" alt="Globoplay" class="streaming-icon">
-          </a>
-          <a href="https://www.apple.com/tv/" target="_blank" class="streaming-link">
-            <img src="https://i.postimg.cc/Yq8SRnHS/tv-removebg-preview.png" alt="Apple TV+" class="streaming-icon">
-          </a>
-          <a href="https://www.youtube.com/" target="_blank" class="streaming-link">
-            <img src="https://i.postimg.cc/Z5XR7Vvm/Youtube-logo-removebg-preview-1.png" alt="YouTube" class="streaming-icon">
-          </a>
+            <a href="https://www.disneyplus.com" target="_blank" class="streaming-link">
+                <img src="https://i.postimg.cc/FFytNMfP/diss-removebg-preview.png" alt="Disney+" class="streaming-icon">
+            </a>
+            <a href="https://globoplay.globo.com/" target="_blank" class="streaming-link">
+                <img src="https://i.postimg.cc/qRQ8GBbb/globoplay-removebg-preview.png" alt="Globoplay" class="streaming-icon">
+            </a>
+            <a href="https://www.apple.com/tv/" target="_blank" class="streaming-link">
+                <img src="https://i.postimg.cc/Yq8SRnHS/tv-removebg-preview.png" alt="Apple TV+" class="streaming-icon">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" class="streaming-link">
+                <img src="https://i.postimg.cc/Z5XR7Vvm/Youtube-logo-removebg-preview-1.png" alt="YouTube" class="streaming-icon">
+            </a>
+            <a href="https://www.telecine.com.br" target="_blank" class="streaming-link rounded-border">
+                <img src="https://i.postimg.cc/JhYdcXhP/telecine.jpg" alt="Telecine" class="streaming-icon">
+            </a>
+            <a href="https://www.viki.com" target="_blank" class="streaming-link rounded-border">
+                <img src="https://i.postimg.cc/QMqn5TTn/VIKI.jpg" alt="Viki" class="streaming-icon">
+            </a>
         </div>
-      </div>
+    </div>
+    
+    
 
     <div class="menu-hamburger" id="hamburgerMenu">
         <div></div>

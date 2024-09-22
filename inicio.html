@@ -16,16 +16,16 @@
   </script>
 
 <style>
-  .streaming-container {
+.streaming-container {
     display: flex;
     align-items: center;
     overflow-x: auto;
     padding: 10px;
     box-sizing: border-box;
     position: relative;
-  }
+}
 
-  .more-options-button {
+.more-options-button {
     margin-right: 10px;
     cursor: pointer;
     background-color: #d3d3d3;
@@ -40,74 +40,68 @@
     font-weight: bold;
     z-index: 1;
     transition: background-color 0.2s, box-shadow 0.2s;
-  }
+}
 
-  .more-options-button:hover {
+.more-options-button:hover {
     background-color: #b0b0b0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .streaming-link {
+.streaming-link {
     margin-right: 10px;
-  }
+}
 
-  .streaming-link img {
+.streaming-link img {
     max-width: 60px;
     max-height: 60px;
     transition: transform 0.3s, box-shadow 0.2s;
-  }
+}
 
-  .streaming-link img:hover {
+.streaming-link img:hover {
     transform: scale(1.1); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  }
+}
 
-  .more-apps {
+.more-apps {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     overflow-x: auto;
     transition: max-height 0.3s ease-out;
-  }
+}
 
-  .hidden {
-    max-height: 0;
-    overflow: hidden;
-  }
+.hidden {
+    display: none;
+}
 
-  .more-apps.visible {
-    max-height: 1000px;
-  }
+.more-apps.visible {
+    display: flex;
+}
 
-  .more-apps a {
-    margin-left: 10px;
-  }
+@media (max-width: 768px) {
+    .more-apps {
+        display: none; /* Esconde a lista completa em telas menores */
+    }
 
-  @media (max-width: 768px) {
+    .more-apps.visible {
+        display: flex; /* Exibe os links adicionais quando visíveis */
+    }
+}
+
+/* Ajustes de tamanho para telas pequenas */
+@media (max-width: 480px) {
     .more-options-button {
-      font-size: 20px;
-      width: 35px;
-      height: 35px;
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
     }
 
     .streaming-link img {
-      max-width: 50px;
-      max-height: 50px;
+        max-width: 40px;
+        max-height: 40px;
     }
-  }
+}
 
-  @media (max-width: 480px) {
-    .more-options-button {
-      font-size: 18px;
-      width: 30px;
-      height: 30px;
-    }
-
-    .streaming-link img {
-      max-width: 40px;
-      max-height: 40px;
-    }
-  }
 </style>
 
 </head>
@@ -198,29 +192,48 @@
   <div class="streaming-container">
     <button class="more-options-button" aria-label="Mais opções" onclick="toggleMoreApps()">+</button>
     <a href="https://www.primevideo.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Amazon Prime Video" class="streaming-icon">
+        <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Amazon Prime Video" class="streaming-icon">
     </a>
     <a href="https://www.netflix.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/wjvpBHzr/baixados-removebg-preview.png" alt="Netflix" class="streaming-icon">
+        <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" class="streaming-icon">
     </a>
     <a href="https://www.hbomax.com" target="_blank" class="streaming-link">
-      <img src="https://i.postimg.cc/rpM54hh7/hbo-max-removebg-preview-2.png" alt="HBO Max" class="streaming-icon">
+        <img src="https://i.postimg.cc/rpM54hh7/hbo-max-removebg-preview-2.png" alt="HBO Max" class="streaming-icon">
     </a>
     <div class="more-apps hidden">
-      <a href="https://www.disneyplus.com" target="_blank" class="streaming-link">
-        <img src="https://i.postimg.cc/FFytNMfP/diss-removebg-preview.png" alt="Disney+" class="streaming-icon">
-      </a>
-      <a href="https://globoplay.globo.com/" target="_blank" class="streaming-link">
-        <img src="https://i.postimg.cc/qRQ8GBbb/globoplay-removebg-preview.png" alt="Globoplay" class="streaming-icon">
-      </a>
-      <a href="https://www.apple.com/tv/" target="_blank" class="streaming-link">
-        <img src="https://i.postimg.cc/Yq8SRnHS/tv-removebg-preview.png" alt="Apple TV+" class="streaming-icon">
-      </a>
-      <a href="https://www.youtube.com/" target="_blank" class="streaming-link">
-        <img src="https://i.postimg.cc/Z5XR7Vvm/Youtube-logo-removebg-preview-1.png" alt="YouTube" class="streaming-icon">
-      </a>
+        <a href="https://www.disneyplus.com" target="_blank" class="streaming-link">
+            <img src="https://i.postimg.cc/FFytNMfP/diss-removebg-preview.png" alt="Disney+" class="streaming-icon">
+        </a>
+        <a href="https://globoplay.globo.com/" target="_blank" class="streaming-link">
+            <img src="https://i.postimg.cc/qRQ8GBbb/globoplay-removebg-preview.png" alt="Globoplay" class="streaming-icon">
+        </a>
+        <a href="https://www.apple.com/tv/" target="_blank" class="streaming-link">
+            <img src="https://i.postimg.cc/Yq8SRnHS/tv-removebg-preview.png" alt="Apple TV+" class="streaming-icon">
+        </a>
+        
+        <a href="https://www.youtube.com/" target="_blank" class="streaming-link">
+            <img src="https://i.postimg.cc/Z5XR7Vvm/Youtube-logo-removebg-preview-1.png" alt="YouTube" class="streaming-icon">
+        </a>
     </div>
-  </div>
+</div>
+
+  
+  <style>
+    .desktop-only {
+      display: none; 
+    }
+  
+    @media (min-width: 768px) {
+      .desktop-only {
+        display: inline-block; 
+      }
+    }
+  
+    .rounded-icon {
+      border-radius: 10px; 
+    }
+  </style>
+  
 
   <br>
 
@@ -321,7 +334,7 @@
               <p>Uma relação complexa entre Norman Bates e sua mãe, Norma.</p>
           </div>
       </a>
-      <a href="https://youtu.be/Q5WXH1hOgAA?si=k482voiM3AHkWeeD" class="image-button">Assistir</a>
+      <a href="https://www.primevideo.com/-/pt/detail/Motel-Bates/0G56AQAG0YO80KHO9GBDFAAAIR" class="image-button">Assistir</a>
   </div>
 
   <div class="image-container">
@@ -332,7 +345,7 @@
               <p>Um sobrevivente e uma jovem imune enfrentam um mundo devastado.</p>
           </div>
       </a>
-      <a href="https://youtu.be/lW5kiEUVlpo?si=qN2iAsmuPfQ5KxhD" class="image-button">Assistir</a>
+      <a href="https://www.max.com/br/pt/shows/last-of-us/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a?utm_source=universal_search" class="image-button">Assistir</a>
   </div>
 
   <div class="image-container">
@@ -343,7 +356,7 @@
               <p>Um grupo de amigos enfrenta um jogo mortal e segredos do passado.</p>
           </div>
       </a>
-      <a href="https://youtu.be/9PbMtxRKwME?si=W_j9jBgI1WEn3dB6" class="image-button">Assistir</a>
+      <a href="https://www.netflix.com/br/title/81135995?source=35" class="image-button">Assistir</a>
   </div>
 
   <div class="image-container">
@@ -354,7 +367,7 @@
               <p>Uma jovem ingênua luta pela sobrevivência em uma prisão feminina.</p>
           </div>
       </a>
-      <a href="https://youtu.be/N08KRAPzsHU?si=tBWUDMfLeX0LRVMH" class="image-button">Assistir</a>
+      <a href="https://www.netflix.com/br/title/80059465?source=35" class="image-button">Assistir</a>
   </div>
 
   <div class="image-container">
@@ -365,7 +378,7 @@
               <p>Um ex-investigador da ONU luta contra uma pandemia zumbi.</p>
           </div>
       </a>
-      <a href="https://youtu.be/h58irlFbTz0?si=Pu7bwDPnuVY4hRT1" class="image-button">Assistir</a>
+      <a href="https://www.netflix.com/br/title/70262639?source=35" class="image-button">Assistir</a>
   </div>
 </div>
 
@@ -389,8 +402,8 @@
             <a href="https://youtu.be/zPrvlRIvHKY?si=jOZ7HVbjgF6R6JKJ">
               <img src="https://i.postimg.cc/4NCRHH4x/young-r.jpg" alt="Série 7">
               <a href="https://www.netflix.com/br/title/81210762?source=35" target="_blank" class="netflix-button">
-                <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                <span>Assista </span>
+                <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                <span>Netflix</span>
               
             </a>
             <div class="text">
@@ -401,9 +414,9 @@
           <div class="recommendation">
             <a href="https://youtu.be/CrfPDJmN4UM?si=a_wFK3yj6UXvV9tT">
               <img src="https://i.postimg.cc/jdvv0B1Y/the-end-of.jpg" alt="serie 8">
-              <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                <span>Assista </span>
+              <a href="https://www.netflix.com/br/title/80175722?source=35" target="_blank" class="netflix-button">
+                <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                <span>Netflix</span>
             </a>
             <div class="text">
         
@@ -414,9 +427,9 @@
           <div class="recommendation">
             <a href="https://youtu.be/aqy6xXEvWzc?si=33zo64OlaNmbXZsk">
               <img src="https://i.postimg.cc/x1nCH4j8/i-am-not-okay.jpg" alt="serie 9">
-              <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                <span>Assista </span>
+              <a href="https://www.netflix.com/br/title/80244781?source=35" target="_blank" class="netflix-button">
+                <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                <span>Netflix</span>
             </a>
             <div class="text">
               
@@ -426,9 +439,9 @@
           <div class="recommendation">
             <a href="https://youtu.be/5_4SW8HHfUs?si=Hrwo9yXA5d_geMr0">
               <img src="https://i.postimg.cc/Y9hj0Lrx/umbrella-academy.jpg" alt="Serie 10">
-              <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                <span>Assista </span>
+              <a href="https://www.netflix.com/br/title/80186863?source=35" target="_blank" class="netflix-button">
+                <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                <span>Netflix</span>
             </a>
             <div class="text">
 
@@ -438,9 +451,9 @@
           <div class="recommendation">
             <a href="https://youtu.be/FyxPvL0Fb8M?si=kxZU7MqRkwiVSEac">
               <img src="https://i.postimg.cc/44YhNqnT/sabrina.jpg" alt="Serie 11">
-              <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                <span>Assista </span>
+              <a href="https://www.netflix.com/br/title/80223989?source=35" target="_blank" class="netflix-button">
+                <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                <span>Netflix</span>
             </a>
             <div class="text">
             
@@ -449,9 +462,9 @@
           <div class="recommendation">
             <a href="https://youtu.be/RMmGQNNl164?si=P7L3c6Af1dto3R71">
               <img src="https://i.postimg.cc/SQfb9twn/st.jpg" alt="Serie 12">
-              <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                <span>Assista </span>
+              <a href="https://www.netflix.com/br/title/80057281?source=35" target="_blank" class="netflix-button">
+                <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                <span>Netflix</span>
             </a>
             <div class="text">
             
@@ -462,9 +475,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/GXrDYboUnnw?si=cCJeB5VkM4g2izwG">
                 <img src="https://i.postimg.cc/gjMWZNgX/ther-origenals.jpg" alt="Série 13">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/QNKH5YVC/prime-videeo-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.max.com/br/pt/shows/originals/f9cfda47-0083-417b-91eb-9acc7670314d?utm_source=universal_search" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/cH2yz3L4/maxx.jpg" alt="Netflix" id="netflix-logo">
+                  <span>HBO max</span>
               </a>
               <div class="text">
           
@@ -474,9 +487,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/awwKbIqjILk?si=AgXAh115dc82aVeX">
                 <img src="https://i.postimg.cc/jq3myws7/the-walking-dead.jpg" alt="serie 14">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70177057?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
              
@@ -487,9 +500,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/4AUHZfp-0SA?si=hAvaLYdps6Xcbtts">
                 <img src="https://i.postimg.cc/cHTqGQvZ/curded.jpg" alt="serie 15">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80199393?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
               
@@ -499,9 +512,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/VY-TETyvlrY?si=4yhcm_3KWQ-GivCZ">
                 <img src="https://i.postimg.cc/L6MCtzch/LA-CASA.jpg" alt="Serie 16">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80192098?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
        
@@ -511,9 +524,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Se3AfHO7GmY?si=JKONHWDxtKvpFRNY">
                 <img src="https://i.postimg.cc/tCW0yRjn/the-rain.jpg" alt="Serie 17">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80154610?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -525,9 +538,9 @@
           <div class="recommendation">
               <a href="https://youtu.be/4i21ty_umRM?si=NL7FR7BPGWy3U3ji">
                 <img src="https://i.postimg.cc/GmPPQGxh/cobra-kai.jpgg" alt="Serie 18">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81002370?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
        
@@ -539,9 +552,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/lW5kiEUVlpo?si=G_-HSybIyUF8VmK_">
                 <img src="https://i.postimg.cc/gj9FXnv6/the-lastt.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.max.com/br/pt/shows/last-of-us/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a?utm_source=universal_search" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/cH2yz3L4/maxx.jpg" alt="Netflix" id="netflix-logo">
+                  <span>HBO max</span>
               </a>
               <div class="text">
   
@@ -551,9 +564,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/ESEUoa-mz2c?si=XXtcMq_8fWW2-kU8">
                 <img src="https://i.postimg.cc/1zzW62WH/DARK.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80100172?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -564,9 +577,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/DLCM0xqoiNQ?si=uVLGSFHbmK0z3hoq">
                 <img src="https://i.postimg.cc/5yk94ZkR/13-REASONS.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80117470?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
      
@@ -576,9 +589,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/hTyXVn9t0ig?si=Rm6D-MYaPiu8SeVw">
                 <img src="https://i.postimg.cc/Xq2sQLpG/heartstopper.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81059939?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
          
@@ -588,9 +601,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/PHTURxgwZQA?si=U7l26f3XNoMbdeAn">
                 <img src="https://i.postimg.cc/W3DwM3p2/the-100.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.primevideo.com/-/pt/detail/The-100/0OFL7RJBJ9JPM2PP93VXXMBHIL" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/4d8j999Q/primme.jpg" alt="Netflix" id="netflix-logo">
+                  <span>Prime</span>
               </a>
               <div class="text">
                 
@@ -600,9 +613,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/apltEQy8RzQ?si=eLDqxfJZACP5Uzvj">
                 <img src="https://i.postimg.cc/fknsBxn2/supernatural-2.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
+                <a href="https://www.max.com/br/pt/shows/supernatural/759711ff-f46f-4c29-9134-84e247e0e7da?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                  <span>HBO max</span>
               </a>
               <div class="text">
               
@@ -613,9 +626,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/N08KRAPzsHU?si=cJWmzHTL589xjh5C">
                 <img src="https://i.postimg.cc/65Hg0YBx/viu-a-vis.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80059465?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -625,9 +638,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/pDBatKGEtWM?si=RM36uJGnFh5K17Zu">
                 <img src="https://i.postimg.cc/7Ld1KJWV/lucifer.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80057918?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -638,9 +651,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Hj0r9vi7dmU?si=Yr1k18x85bIDrnnp">
                 <img src="https://i.postimg.cc/05DQMKds/sex-education.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80197526?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -650,9 +663,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/n5_3EYFU0y4?si=2PAZ8Rsg5YagHqMV">
                 <img src="https://i.postimg.cc/fRTTr24z/berlin.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81586657?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
    
@@ -662,9 +675,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/oHEz1oT01tg?si=kU1n7exEp__Bgn3g">
                 <img src="https://i.postimg.cc/SQf4b6fJ/shadow-hunters.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80084447?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
     
@@ -674,9 +687,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/GLjxcX9oMlY?si=0o3J_7XOnbvsUacd">
                 <img src="https://i.postimg.cc/85GYZY3w/the-vampire.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
+                <a href="https://www.max.com/br/pt/shows/vampire-diaries/82abff30-9692-4b4b-a78f-ecc932dae717?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                  <span>HBO max</span>
               </a>
               <div class="text">
            
@@ -686,9 +699,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/9PbMtxRKwME?si=awoast9h4dclc3DQ">
                 <img src="https://i.postimg.cc/J4SdHTJt/A-sa-da.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81135995?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
   
@@ -698,9 +711,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/X8kvMgI5PqA?si=3BEOS-127AzCnNw5">
                 <img src="https://i.postimg.cc/Hxjh7FSc/control-Z.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81021245?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -711,9 +724,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/L5_BhggEpzw?si=KSiFhTuQ03ffIqr_">
                 <img src="https://i.postimg.cc/xCKbg1pW/kiss-me-firt.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80097225?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
      
@@ -723,9 +736,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/eafm1gB6SCM?si=pdZjwzp_kExgSDk0">
                 <img src="https://i.postimg.cc/zfwJcH5S/bebe-rena.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81219887?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
          
@@ -735,9 +748,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/8FlSfeBoQQ4?si=dMIfdRng-DvjJOX2">
                 <img src="https://i.postimg.cc/qM84RC6f/n-o-nos-calaremos.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81557682?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.pngg" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
                 
@@ -747,9 +760,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/SqLHo7bIddY?si=ho9WN1mrw5djtJpm">
                 <img src="https://i.postimg.cc/9QL3RPWk/ouder-banks.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80236318?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
               
@@ -760,9 +773,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Q5WXH1hOgAA?si=gCBRJZYxriHinJDW">
                 <img src="https://i.postimg.cc/bwJC57h6/motel-batesssss.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.primevideo.com/-/pt/detail/Motel-Bates/0G56AQAG0YO80KHO9GBDFAAAIR" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/qRF8PJKG/prrime-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Prime</span>
               </a>
               <div class="text">
            
@@ -772,9 +785,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/p6MMYnsuKBY?si=Q0w2_VJujnd-vtXE">
                 <img src="https://i.postimg.cc/XJ0gnhR6/a-infermeira.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81473355?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -785,9 +798,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/38EHhWc5-uM?si=slpHZFtWgV1H-xC5">
                 <img src="https://i.postimg.cc/pdQFJd63/Manual-de-assassinato-para-boas-garotas.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81759464?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -797,9 +810,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Yi4YnwFT7Gk?si=MgS3KpuHFXmk6ZmF">
                 <img src="https://i.postimg.cc/RCYNff0N/vikings.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70301870?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
    
@@ -809,9 +822,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/PHTURxgwZQA?si=x20Foj3ACsX_YFvX">
                 <img src="https://i.postimg.cc/qR5MsV49/the-100.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
+                <a href="https://www.primevideo.com/-/pt/detail/The-100/0OFL7RJBJ9JPM2PP93VXXMBHIL" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                  <span>Prime</span>
               </a>
               <div class="text">
     
@@ -821,9 +834,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/SLVDdGlFY74?si=6CLte-OLftTn7Jjn">
                 <img src="https://i.postimg.cc/PxP8sMxn/all-of-us-are-dead.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81237994?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -834,9 +847,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/kCd2kfEg6iY?si=1trU5UhEmx3-k2cQ">
                 <img src="https://i.postimg.cc/zfpn1BFK/meninas-malvadas.webp" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/60034551?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -846,9 +859,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Ka4-aW9IcGI?si=oqOs7PFaf9Talo9Z">
                 <img src="https://i.postimg.cc/7ZZznDkL/insatiable.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80179905?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -859,9 +872,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/XhsV1gPVJMQ?si=RwAky6CAI1AhE75L">
                 <img src="https://i.postimg.cc/kgJQYKxq/gossip-girll.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70143811?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -871,9 +884,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/nwHvFNQG5UE?si=tk5b20n5dt4rUSjq">
                 <img src="https://i.postimg.cc/sD6xyhkV/pretty.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.max.com/br/pt/shows/pretty-little-liars/02e9fe50-46af-49be-be3b-0d09f98d7e33?utm_source=universal_search" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
    
@@ -883,9 +896,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/MgrsYZ8xjow?si=GAYasYS6LG-KAYoV">
                 <img src="https://i.postimg.cc/nhb5XRbT/rebelde.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
+                <a href="https://globoplay.globo.com/rebelde/t/NJ52XH2fqt/?origemId=91698" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                  <span>GloboPlay</span>
               </a>
               <div class="text">
     
@@ -895,9 +908,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/LqQqeORxw4g?si=3e1Frxe7TOZjsVeR">
                 <img src="https://i.postimg.cc/vHH7357M/Orange-black.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70242311?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netiflix </span>
               </a>
               <div class="text">
            
@@ -907,9 +920,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/jyGi_9xd-os?si=1OAvkQyqNUGNqoEW">
                 <img src="https://i.postimg.cc/02F6DScV/bom-dia-veronicaa.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80221223?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -919,9 +932,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/pD0lTb3WaUQ?si=--I3Z3hLvMLHDirP">
                 <img src="https://i.postimg.cc/RFpC9rYg/quem-matou-sara.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81166747?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -932,9 +945,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/mhZJVg6zNRA?si=Fc2_GP2Jv5dt7xSh">
                 <img src="https://i.postimg.cc/fW3SL5vV/a-sociedade.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81268316?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -944,9 +957,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/iySNbu_Gr98?si=4Srr6z6b8UdoN5OG">
                 <img src="https://i.postimg.cc/X7BCqx42/ponto-cego.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.primevideo.com/-/pt/detail/Blindspot/0GM6ZQR0RB1V6MKRZXNPIXVSUR" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/qRF8PJKG/prrime-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Prime</span>
               </a>
               <div class="text">
    
@@ -956,9 +969,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/bRNajdYu6pQ?si=gfH5ZP0fTeFvyhX5">
                 <img src="https://i.postimg.cc/L6K5sSXW/o-nevoeiro.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80135414?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
     
@@ -968,9 +981,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/BmHM5eUp9w4?si=_22Pu5hqPDR-Uy1t">
                 <img src="https://i.postimg.cc/2SHCnNkr/teen-wolf.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.primevideo.com/-/pt/detail/Lobo-adolescente-serie-de-televisi%C3%B3n/0SGHR7QGXXUC34I29SGTAMPB0X" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/qRF8PJKG/prrime-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Prime</span>
               </a>
               <div class="text">
            
@@ -981,9 +994,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/xdBWrkcmMwU?si=rCBw3gbUojehse4M">
                 <img src="https://i.postimg.cc/1RCxpnwp/loki.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
+                <a href="https://www.disneyplus.com/pt-br/series/loki/6pARMvILBGzF" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                  <span>Disney</span>
               </a>
               <div class="text">
            
@@ -993,9 +1006,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/ZGYjQxX7Bok?si=qLuoS-LL_5ltTW4W">
                 <img src="https://i.postimg.cc/2jM106fZ/99.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70281562?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -1006,9 +1019,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/XJdWOkyXdXs?si=Z-kw2rAubClAa2Nt">
                 <img src="https://i.postimg.cc/CM70cMn4/outlander.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70285581?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -1018,9 +1031,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/sefQqCMusJI?si=rEYtf72hYLHNeBca">
                 <img src="https://i.postimg.cc/d3wywQJB/glee.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.disneyplus.com/pt-br/series/glee/5h5XCwlaqNBK" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/rmYwgz4q/diisney.png" alt="Netflix" id="netflix-logo">
+                  <span>Disney</span>
               </a>
               <div class="text">
    
@@ -1030,9 +1043,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/XRxFCM2vU7o?si=tOfy8-KDXJJ215iw">
                 <img src="https://i.postimg.cc/Y9cXNFxC/fam-lia-moderna.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.disneyplus.com/pt-br/series/modern-family/6p2yzz9mh8Kp" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/rmYwgz4q/diisney.png" alt="Netflix" id="netflix-logo">
+                  <span>Disney</span>
               </a>
               <div class="text">
     
@@ -1042,9 +1055,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/T8rZHWgYpyA?si=u2G4dP6C8kzPQHZf">
                 <img src="https://i.postimg.cc/nhrZN8fQ/esta-o-19.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.disneyplus.com/pt-br/series/station-19/3de52zcRJZGt" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/rmYwgz4q/diisney.png" alt="Netflix" id="netflix-logo">
+                  <span>Disney</span>
               </a>
               <div class="text">
            
@@ -1054,9 +1067,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/XXHFrsN2y4s?si=4HyDycVlBrFxfRTj">
                 <img src="https://i.postimg.cc/0QP9Wzk9/ruptura.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://tv.apple.com/br/episode/good-news-about-hell/umc.cmc.s80mx1ic96pu6ewupz8pfasf" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/j5wkDdzD/tv.webp" alt="Netflix" id="netflix-logo">
+                  <span>tv+</span>
               </a>
               <div class="text">
            
@@ -1066,9 +1079,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/0BG3c1ika48?si=j1qgwV9d5LtZ1uts">
                 <img src="https://i.postimg.cc/K8TNQzpq/euforia.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.max.com/br/pt/shows/euphoria/4ffd33c9-e0d6-4cd6-bd13-34c266c79be0?utm_source=universal_search" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
+                  <span>HBO max</span>
               </a>
               <div class="text">
           
@@ -1079,9 +1092,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Ep4mF7Ky2VI?si=Os_qKV0VPB7md87l">
                 <img src="https://i.postimg.cc/4xFYKbQj/Emily-em-paris.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81037371?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -1091,9 +1104,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/1M0oeaIQNg4?si=fVplkNi41a5Z6XjA">
                 <img src="https://i.postimg.cc/rmV3vWvF/fleabag.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.primevideo.com/dp/amzn1.dv.gti.64b55200-c545-6a79-0c43-e6246e9a15fd?autoplay=0&ref_=atv_cf_strg_wb" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/qRF8PJKG/prrime-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Prime</span>
               </a>
               <div class="text">
    
@@ -1103,9 +1116,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/WlopfWYGBh4?si=_XkRpDo2g7vKvl5a">
                 <img src="https://i.postimg.cc/xT6vRmP3/one-day.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81256740" target="_blank" class="netflix-button">
+                  <img src=https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
     
@@ -1115,9 +1128,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/4sQGw6sOoU8?si=usPW6Yyr9NxhHRQ9">
                 <img src="https://i.postimg.cc/tTrqf9vw/rainha-charlote.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81476183?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -1128,9 +1141,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/QZro6EDNVD8?si=MutEcmiM7vnip9wT">
                 <img src="https://i.postimg.cc/bvmdqpV0/dexter.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70136126?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -1140,9 +1153,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/L_ONvcTPB0w?si=cZ6iWZkdRmuwq-r-">
                 <img src="https://i.postimg.cc/jqw42S0S/bem-vindos-a-vizinha-a.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/81380441?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -1153,9 +1166,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/WZCxI1qv310?si=Ra0Ft-iTe84R5VL_">
                 <img src="https://i.postimg.cc/3N54d7mk/alice-em-bordland.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80200575?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -1165,9 +1178,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/M8qG0vS2zWM?si=1YlwXhNH38YcUsGN">
                 <img src="https://i.postimg.cc/c1h0K0QP/black-mirror.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70264888?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
    
@@ -1177,9 +1190,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/Lyq-EvsIC7o?si=TBubcDYANp-d_RTr">
                 <img src="https://i.postimg.cc/zvGmwHn6/skins.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70140438?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
     
@@ -1189,9 +1202,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/4Rc9EdlaX4Q?si=L9vO7apapm6lEUgC">
                 <img src="https://i.postimg.cc/JzBfQLkr/grey-s-anatomy.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.disneyplus.com/pt-br/series/greys-anatomy/6P4ZI3bWwSDj" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/rmYwgz4q/diisney.png" alt="Netflix" id="netflix-logo">
+                  <span>Disney</span>
               </a>
               <div class="text">
            
@@ -1201,9 +1214,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/y8ZINltAsIg?si=76UJBa4S-lGkaKpS">
                 <img src="https://i.postimg.cc/mkYwrmzG/peaky-bliders.jpg" alt="Série 1">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80002479?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
            
@@ -1213,9 +1226,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/pyi8QAlHR8k?si=hOfPrjXrF-AQCcnM">
                 <img src="https://i.postimg.cc/qMpcLX6z/bridgerton.jpg" alt="serie 2">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80232398?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
           
@@ -1226,9 +1239,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/eE8HtX0GwfI?si=Fs8GcjYOifvF6Fzy">
                 <img src="https://i.postimg.cc/HsPJyQwG/ratched.jpg" alt="serie 3">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/80213445?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
 
@@ -1238,9 +1251,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/WAFjHM-syNo?si=XGadFBOhtWAOIPM3">
                 <img src="https://i.postimg.cc/3wh34Rc5/penny.jpg" alt="Serie 4">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
+                <a href="https://www.primevideo.com/dp/amzn1.dv.gti.889a8a5a-33a3-4f29-ad9f-fce47ac95add?autoplay=0&ref_=atv_cf_strg_wb" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                  <span>Prime</span>
               </a>
               <div class="text">
    
@@ -1250,9 +1263,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/oOCaBPbm7KE?si=YKwTCxwk2MlSThPN">
                 <img src="https://i.postimg.cc/Pf0JftTh/lost.jpg" alt="Serie 5">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/0NSWYQ0B/baixados-3-removebg-preview.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.netflix.com/br/title/70136118?source=35" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/FRfw0KVt/net-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Netflix</span>
               </a>
               <div class="text">
     
@@ -1262,9 +1275,9 @@
             <div class="recommendation">
               <a href="https://youtu.be/3tmqLvgUd-s?si=Rtsq-jgybSGNWSye">
                 <img src="https://i.postimg.cc/L60T8gh5/my-mad-fat-diary.jpg" alt="Serie 6">
-                <a href="URL_DO_FILME_NA_NETFLIX" target="_blank" class="netflix-button">
-                  <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>Assista </span>
+                <a href="https://www.primevideo.com/-/pt/detail/My-Mad-Fat-Diary/0STBF3CVS2LSVP941BTOD05XO2" target="_blank" class="netflix-button">
+                  <img src="https://i.postimg.cc/qRF8PJKG/prrime-removebg-preview.png" alt="Netflix" id="netflix-logo">
+                  <span>Prime</span>
               </a>
               <div class="text">
            
