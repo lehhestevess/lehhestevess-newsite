@@ -1,3 +1,7 @@
+filmes:
+
+filmes
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/d1JQZKVQ/pipoca.png">
     <title>Filmes</title>
 </head>
 <body>
@@ -14,36 +19,161 @@
     
     <section id="filmes">
      
-      <div class="top-bar">
-        <div class="menu-icon" id="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="top-bar-content">
-          <a href="index.html">
-              <img src="https://i.postimg.cc/fL7S56Dt/Black-and-White-Circle-Business-Logo-removebg-preview-1.png" alt="Descrição da Imagem" class="top-bar-image">
-          </a>
-          
-          <span class="top-bar-text">Movie Fusion</span>
-      </div>
+      <style>
+        /* Estilos do cabeçalho */
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: fixed; /* Para manter o cabeçalho fixo no topo */
+            top: 0; /* Alinha ao topo da página */
+            left: 0;
+            right: 0;
+            transition: all 0.3s ease; /* Transição suave */
+            z-index: 1000; /* Mantém o cabeçalho acima de outros elementos */
+        }
+
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Estilos do botão de menu hamburguer */
+        #menuToggle, .mobile-menu-button {
+            display: flex;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+        }
+
+        .bar {
+            height: 4px;
+            width: 100%;
+            background-color: #333; /* Cor das barras do menu */
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-button {
+            display: none; /* Oculta por padrão */
+        }
+
+        .navigation {
+            display: none; /* Oculta o menu por padrão */
+        }
+
+        .navigation.show {
+            display: block; /* Mostra o menu quando ativado */
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none; /* Oculta o botão do menu padrão em dispositivos móveis */
+            }
+
+            .mobile-menu-button {
+                display: flex; /* Exibe o botão de menu hamburguer em telas menores */
+            }
+
+            .navigation {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white; /* Cor de fundo do menu */
+                z-index: 1000; /* Certifica-se de que o menu fique acima de outros elementos */
+            }
+
+            .navigation-items {
+                flex-direction: column; /* Alinha os itens do menu verticalmente */
+            }
+
+            .navigation-items a {
+                padding: 15px; /* Espaçamento dos itens do menu */
+            }
+        }
+
+        /* Estilo para ocultar o cabeçalho */
+        .hidden {
+            transform: translateY(-100%); /* Move o cabeçalho para fora da tela */
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <a href="#" class="logo">Movie Fusion</a>
+    <div class="menu" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
+    <div class="mobile-menu-button" id="mobileMenuButton">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div> <!-- Botão do menu móvel -->
+    <div class="navigation" id="navigation">
+        <div class="close-menu" id="closeMenu">&times;</div>
+        <div class="navigation-items">
+          <a href="index.html">HOME</a>
+            <a href="inicio.html">INICIO</a>
+            <a href="inicio.html#series">SERIES</a>
+            <a href="animação.html">ANIMAÇÕES</a>
+            <a href="DocumentáriosCriminais.html">CRIMINAL</a>
+            <a href="doramas.html">DORAMAS</a>
+            <a href="formulario.html">FORMULÁRIO</a>
+        </div>
+    </div>
+</header>
 
-    
+<script>
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
 
+    window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    <nav id="menu" class="menu">
-      <ul>
-          <li><a href="index.html">Movie Fusion</a></li>
-          <li><a href="inicio.html">Home</a></li>
-          <li><a href="#series">Séries</a></li>
-          <li><a href="animação.html">Animações</a></li>
-          <li><a href="filmes.html#terroresuspense">Terror e Suspense</a></li>
-          <li><a href="filmes.html#romanceeoutros">Romance e outros</a></li>
-          <li><a href="doramas.html">Doramas</a></li>
-          <li><a href="DocumentáriosCriminais.html">Documentários Criminais</a></li>
-          <li><a href="formulario.html">Formulário de Contato</a></li>
-      </ul>
+        if (currentScroll > lastScrollTop) {
+            header.classList.add('hidden'); 
+        } else {
+            header.classList.remove('hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+    });
+
+    document.getElementById('menuToggle').addEventListener('click', function () {
+        toggleNavigation();
+    });
+
+    document.getElementById('mobileMenuButton').addEventListener('click', function () {
+        toggleNavigation();
+    });
+
+    document.getElementById('closeMenu').addEventListener('click', function () {
+        closeNavigation();
+    });
+
+    function toggleNavigation() {
+        const navigation = document.getElementById('navigation');
+        navigation.classList.toggle('show');
+        const closeMenu = document.getElementById('closeMenu');
+        closeMenu.style.display = navigation.classList.contains('show') ? 'block' : 'none';
+        document.getElementById('menuToggle').style.display = navigation.classList.contains('show') ? 'none' : 'flex';
+    }
+
+    function closeNavigation() {
+        const navigation = document.getElementById('navigation');
+        navigation.classList.remove('show');
+        document.getElementById('closeMenu').style.display = 'none';
+        document.getElementById('menuToggle').style.display = 'flex';
+    }
+</script>
+l>
   </nav>
     
   <div class="carousel">
@@ -227,15 +357,16 @@
 
 </style>
 
-<div class="munuuujk">
+<!--<div class="munuuujk">
   <ul>
       <li><a href="inicio.html">Início</a></li>
       <li><a href="inicio.html#series">Séries</a></li>
       <li><a href="DocumentáriosCriminais.html">Criminal</a></li>
       <li><a href="animação.html">Animações</a></li>
   </ul>
-</div>
+</div>-->
 
+<hr class="linha-divisao"> 
 <br>
 <br>
 <div class="os-melhores">
@@ -243,8 +374,7 @@
   <img src="https://i.postimg.cc/Dyw0QGP1/a-o-removebg-preview.png" alt="Série 13">
 </div>
 </div>
-
-<hr class="linha-divisao">       
+      
 <div class="image-row">
   <div class="image-container">
       <a href="https://youtu.be/SLhhP7iknf8?si=lDWPQ_wsxHaLULbT">
@@ -3113,6 +3243,20 @@ main {
         });
       });
     </script>
+
+<br> 
+<footer class="footer">
+  <div class="linkcor">
+      <a href="https://lehhestevess.github.io/IntroducaoAoHtml/">Introdução ao HTML</a>
+      <a href="https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo</a>
+      <a href="https://lehhestevess.github.io/leticiaatividades/">Tabela</a>
+      <a href="https://lehhestevess.github.io/Lista-de-Tarefas-/">Lista de Tarefas</a>
+  </div>
+  <div class="contact-info">
+      <p>Contato: lehhjardim@gmail.com</p>
+  </div>
+</footer>
+
     
     </body>
     </html>

@@ -1,3 +1,5 @@
+documentários:
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -6,39 +8,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/WzYS71Hq/1255916.png">
     <title>Documentários Criminais</title>
 </head>
 <body>
 
-  <div class="top-bar">
-    <div class="menu-icon" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <div class="top-bar-content">
-        <a href="index.html">
-            <img src="https://i.postimg.cc/fL7S56Dt/Black-and-White-Circle-Business-Logo-removebg-preview-1.png" alt="Descrição da Imagem" class="top-bar-image">
-        </a>
-        <span class="top-bar-text">Movie Fusion</span>
-    </div>
-</div>
+    <style>
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+    
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
+    
+        #menuToggle, .mobile-menu-button {
+            display: flex;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+        }
+    
+        .bar {
+            height: 4px;
+            width: 100%;
+            background-color: #333;
+            transition: all 0.3s ease;
+        }
+    
+        .mobile-menu-button {
+            display: none;
+        }
+    
+        .navigation {
+            display: none;
+        }
+    
+        .navigation.show {
+            display: block;
+        }
+    
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+    
+            .mobile-menu-button {
+                display: flex;
+            }
+    
+            .navigation {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                z-index: 1000;
+            }
+    
+            .navigation-items {
+                flex-direction: column;
+            }
+    
+            .navigation-items a {
+                padding: 15px;
+            }
+        }
+    
+        .hidden {
+            transform: translateY(-100%);
+        }
+    </style>
+    
 
-<nav id="menu" class="menu">
-    <ul>
-        <li><a href="index.html">Movie Fusion</a></li>
-        <li><a href="inicio.html">Home</a></li>
-        <li><a href="#series">Séries</a></li>
-        <li><a href="filmes.html">Filmes</a></li>
-        <li><a href="animação.html">Animaões</a></li>
-        <li><a href="filmes.html#terroresuspense">Terror e Suspense</a></li>
-        <li><a href="filmes.html#romanceeoutros">Romance e outros</a></li>
-        <li><a href="doramas.html">Doramas</a></li>
-        <li><a href="podcasts.html">Podcasts</a></li>
-        <li><a href="formulario.html">Formulário de Contato</a></li>
-        <li><a href="DocumentáriosCriminais.html">Documentários Criminais</a></li>
-    </ul>
-</nav>
+</head>
+<body>
+
+    <header id="header">
+        <a href="#" class="logo">Movie Fusion</a>
+        <div class="menu" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="mobile-menu-button" id="mobileMenuButton">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div> 
+        <div class="navigation" id="navigation">
+            <div class="close-menu" id="closeMenu">&times;</div>
+            <div class="navigation-items">
+              <a href="index.html">HOME</a>
+                <a href="inicio.html">INICIO</a>
+                <a href="filmes.html">FILMES</a>
+                <a href="inicio.html#series">SERIES</a>
+                <a href="animação.html">ANIMAÇÕES</a>
+                <a href="doramas.html">DORAMAS</a>
+                <a href="formulario.html">FORMULÁRIO</a>
+            </div>
+        </div>
+    </header>
+
+<script>
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            header.classList.add('hidden'); // Adiciona a classe para ocultar o cabeçalho
+        } else {
+            header.classList.remove('hidden'); // Remove a classe para mostrar o cabeçalho
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para evitar números negativos
+    });
+
+    document.getElementById('menuToggle').addEventListener('click', function () {
+        toggleNavigation();
+    });
+
+    document.getElementById('mobileMenuButton').addEventListener('click', function () {
+        toggleNavigation();
+    });
+
+    document.getElementById('closeMenu').addEventListener('click', function () {
+        closeNavigation();
+    });
+
+    function toggleNavigation() {
+        const navigation = document.getElementById('navigation');
+        navigation.classList.toggle('show');
+        const closeMenu = document.getElementById('closeMenu');
+        closeMenu.style.display = navigation.classList.contains('show') ? 'block' : 'none';
+        document.getElementById('menuToggle').style.display = navigation.classList.contains('show') ? 'none' : 'flex';
+    }
+
+    function closeNavigation() {
+        const navigation = document.getElementById('navigation');
+        navigation.classList.remove('show');
+        document.getElementById('closeMenu').style.display = 'none';
+        document.getElementById('menuToggle').style.display = 'flex';
+    }
+</script>
+
 
   <div class="carousel">
     <div class="carousel-inner">
@@ -60,6 +188,8 @@
     </div>
     </div>
 </div>
+
+
 
 <style>
   body {
@@ -120,14 +250,6 @@
   }
 </style>
 
-<div class="munuuujk">
-  <ul>
-      <li><a href="inicio.html">Início</a></li>
-      <li><a href="inicio.html#series">Séries</a></li>
-      <li><a href="DocumentáriosCriminais.html">Criminal</a></li>
-      <li><a href="animação.html">Animações</a></li>
-  </ul>
-</div>
 
 <br>
           <style>
@@ -211,7 +333,10 @@
                   }
               }
           </style>
-     
+
+          <hr class="linha-divisao"> 
+        
+          <h2>Os casos que marcaram a história</h2>
           <main>
               <section id="documentários">
                   <div class="o-youtube-container">
@@ -256,11 +381,10 @@
                   document.querySelector('.o-youtube').scrollBy({ left: 300, behavior: 'smooth' });
               });
           </script>
-      </body>
-      </html>
+    
       
 
-  <hr class="linha-divisao">
+ 
   <h1>Documentários Criminais</h1>
     <section id="doramas">
       <div class="container">
@@ -532,7 +656,7 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-image: url('https://i.postimg.cc/GpZHCSbT/glare.jpg'); 
+        background-image: url(''); 
         background-size: cover; 
         background-position: center; 
         background-repeat: no-repeat; 
@@ -717,4 +841,19 @@ main {
         });
     });
     </script>
-   
+
+<br> 
+<footer class="footer">
+  <div class="linkcor">
+      <a href="https://lehhestevess.github.io/IntroducaoAoHtml/">Introdução ao HTML</a>
+      <a href="https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo</a>
+      <a href="https://lehhestevess.github.io/leticiaatividades/">Tabela</a>
+      <a href="https://lehhestevess.github.io/Lista-de-Tarefas-/">Lista de Tarefas</a>
+  </div>
+  <div class="contact-info">
+      <p>Contato: lehhjardim@gmail.com</p>
+  </div>
+</footer>
+
+  </body>
+  </html>
