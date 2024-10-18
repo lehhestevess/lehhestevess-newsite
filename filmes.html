@@ -19,90 +19,88 @@ filmes
     
     <section id="filmes">
      
-      <style>
-        /* Estilos do cabeçalho */
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            position: fixed; /* Para manter o cabeçalho fixo no topo */
-            top: 0; /* Alinha ao topo da página */
-            left: 0;
-            right: 0;
-            transition: all 0.3s ease; /* Transição suave */
-            z-index: 1000; /* Mantém o cabeçalho acima de outros elementos */
-        }
+<style>
+    #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
 
-        .logo {
-            font-size: 24px;
-            text-decoration: none;
-            color: #333;
-        }
+    .logo {
+        font-size: 24px;
+        text-decoration: none;
+        color: #333;
+    }
 
-        /* Estilos do botão de menu hamburguer */
-        #menuToggle, .mobile-menu-button {
-            display: flex;
-            cursor: pointer;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 24px;
-        }
+    #menuToggle, .mobile-menu-button {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+    }
 
-        .bar {
-            height: 4px;
-            width: 100%;
-            background-color: #333; /* Cor das barras do menu */
-            transition: all 0.3s ease;
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.show {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
         }
 
         .mobile-menu-button {
-            display: none; /* Oculta por padrão */
+            display: flex;
         }
 
         .navigation {
-            display: none; /* Oculta o menu por padrão */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            z-index: 1000;
         }
 
-        .navigation.show {
-            display: block; /* Mostra o menu quando ativado */
+        .navigation-items {
+            flex-direction: column;
         }
 
-        @media (max-width: 768px) {
-            .menu {
-                display: none; /* Oculta o botão do menu padrão em dispositivos móveis */
-            }
-
-            .mobile-menu-button {
-                display: flex; /* Exibe o botão de menu hamburguer em telas menores */
-            }
-
-            .navigation {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white; /* Cor de fundo do menu */
-                z-index: 1000; /* Certifica-se de que o menu fique acima de outros elementos */
-            }
-
-            .navigation-items {
-                flex-direction: column; /* Alinha os itens do menu verticalmente */
-            }
-
-            .navigation-items a {
-                padding: 15px; /* Espaçamento dos itens do menu */
-            }
+        .navigation-items a {
+            padding: 15px;
         }
+    }
 
-        /* Estilo para ocultar o cabeçalho */
-        .hidden {
-            transform: translateY(-100%); /* Move o cabeçalho para fora da tela */
-        }
-    </style>
+    .hidden {
+        transform: translateY(-100%);
+    }
+</style>
+
 </head>
-<body>
+
 
 <header id="header">
     <a href="#" class="logo">Movie Fusion</a>
@@ -861,7 +859,7 @@ l>
               <img src="https://i.postimg.cc/wjgb5qYJ/a-orfa.jpg" alt="Filme 10">
               <a href="https://www.max.com/br/pt/movies/orfa/ef8b0160-dd37-48c8-8fda-0171b9ecb785?utm_source=universal_search" target="_blank" class="netflix-button">
                 <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                <span>HBO max</span>
+                <span>HBO</span>
             </a>
             <div class="text">
           
@@ -1232,7 +1230,7 @@ l>
               <img src="https://i.postimg.cc/HstxJrTG/sobrenatural.jpg" alt="Filme 17">
               <a href="https://www.max.com/br/pt/movies/sobrenatural/738872bb-70ce-4ddc-afc8-bf6a98437fff?utm_source=universal_search" target="_blank" class="netflix-button">
                 <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                <span>HBO max</span>
+                <span>HBO</span>
             </a>
             <div class="text">
              
@@ -1461,7 +1459,7 @@ l>
                 <img src="https://i.postimg.cc/J4vz41nw/annabelle.jpg" alt="Filme 1">
                 <a href="https://www.max.com/br/pt/movies/annabelle/91307316-5bba-408f-a100-fbf2e1d530a5?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO</span>
               </a>
               <div class="text">
           
@@ -1474,7 +1472,7 @@ l>
                 <img src="https://i.postimg.cc/Bn5f9sPB/annabelle-2.jpg" alt="Filme 2">
                 <a href="https://www.max.com/br/pt/movies/annabelle-2-a-criacao-do-mal/19e271f6-9ace-4109-96ce-c1dd79fddac3?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO</span>
               </a>
               <div class="text">
        
@@ -1487,7 +1485,7 @@ l>
                 <img src="https://i.postimg.cc/pd81mCXP/annabelle-3.jpg" alt="Filme 3">
                 <a href="https://www.max.com/br/pt/movies/annabelle-3-de-volta-para-casa/d62703c7-a2d0-47df-beda-767067b22f4a?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO</span>
               </a>
               <div class="text">
   
@@ -1536,7 +1534,7 @@ l>
                 <img src="https://i.postimg.cc/Fz3ndPQg/A-FREIRA.jpg" alt="Filme 1">
                 <a href="https://www.max.com/br/pt/movies/freira/81363776-8629-4c4a-a54f-9396d653e89b?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO</span>
               </a>
               <div class="text">
           
@@ -1549,7 +1547,7 @@ l>
                 <img src="https://i.postimg.cc/rFGPqYjq/A-freira-2.jpg" alt="Filme 2">
                 <a href="https://www.max.com/br/pt/movies/freira-2/8940b40c-9e62-45e1-af18-efcf774e1a21?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO</span>
               </a>
               <div class="text">
        
@@ -1562,7 +1560,7 @@ l>
                 <img src="https://i.postimg.cc/fyDYC59v/it-a-coisa.jpg" alt="Filme 3">
                 <a href="https://www.max.com/br/pt/movies/it-a-coisa/1fef0800-258f-49f5-84a5-6a1f88173769?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO</span>
               </a>
               <div class="text">
   
@@ -1574,7 +1572,7 @@ l>
                 <img src="https://i.postimg.cc/tRN3J0Kv/it-a-coisa-2.jpg" alt="Filme 4">
                 <a href="https://www.max.com/br/pt/movies/it-capitulo-dois/f074dc8a-09b6-47be-b3fa-480c72af3060?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max</span>
+                  <span>HBO </span>
               </a>
               <div class="text">
    
@@ -1586,7 +1584,7 @@ l>
                 <img src="https://i.postimg.cc/GpRCnPQD/it-filme.jpg" alt="Filme 5">
                 <a href="https://www.max.com/br/pt/movies/it-capitulo-dois/f074dc8a-09b6-47be-b3fa-480c72af3060?utm_source=universal_search" target="_blank" class="netflix-button">
                   <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-                  <span>HBO max </span>
+                  <span>HBO</span>
               </a>
               <div class="text">
           
@@ -1705,7 +1703,7 @@ l>
         <img src="https://i.postimg.cc/MTqHRxgs/premoni-o.jpg" alt="Filme 1">
         <a href="https://www.max.com/br/pt/movies/premonicao/0ae3ced5-06ed-444d-b29f-4157e7871fa1?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
   
@@ -1718,7 +1716,7 @@ l>
         <img src="https://i.postimg.cc/NjxjcZKm/premoni-o-2.jpg" alt="Filme 2">
         <a href="https://www.max.com/br/pt/movies/premonicao-2/0c2197de-46f4-454c-a007-929308d3ef90?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
 
@@ -1731,7 +1729,7 @@ l>
         <img src="https://i.postimg.cc/mD9xbFmJ/premoni-o-3.jpg" alt="Filme 3">
         <a href="https://www.max.com/br/pt/movies/premonicao-3/0062f97c-f68e-4a19-a20c-3240e7021249?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
 
@@ -1743,7 +1741,7 @@ l>
         <img src="https://i.postimg.cc/j29JymHL/premoni-o-4.jpg" alt="Filme 4">
         <a href="https://www.max.com/br/pt/movies/premonicao-4-2009/8d92d653-fb6b-45e9-b2f0-b25218da741b?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max </span>
+          <span>HBO</span>
       </a>
       <div class="text">
 
@@ -1755,7 +1753,7 @@ l>
         <img src="https://i.postimg.cc/0NcjphxP/premoni-o-55.jpg" alt="Filme 5">
         <a href="https://www.max.com/br/pt/movies/premonicao-5/8ad837cc-341e-48ca-bbad-b52cfd8a4239?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max </span>
+          <span>HBO</span>
       </a>
       <div class="text">
   
@@ -1767,7 +1765,7 @@ l>
         <img src="https://i.postimg.cc/htChmHKg/premoni-o-6.jpg" alt="Filme 6">
         <a href="https://www.max.com/br/pt/movies/premonicao-5/8ad837cc-341e-48ca-bbad-b52cfd8a4239?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
 
@@ -2134,7 +2132,7 @@ l>
         <img src="https://i.postimg.cc/fyckB7kw/animais-fantasticos.jpg" alt="Filme 17">
         <a href="https://www.max.com/br/pt/movies/animais-fantasticos-os-segredos-de-dumbledore/3cfe3099-e685-40fe-b858-a5013692e030?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max </span>
+          <span>HBO</span>
       </a>
       <div class="text">
 
@@ -2146,7 +2144,7 @@ l>
         <img src="https://i.postimg.cc/v8rBRzHy/animais-fantasticos-2.jpg" alt="Filme 18">
         <a href="https://www.max.com/br/pt/movies/animais-fantasticos-e-onde-habitam/d627b35d-31a0-4e62-af14-6ec2fd8fdaef?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max </span>
+          <span>HBO</span>
       </a>
       <div class="text">
         
@@ -2159,7 +2157,7 @@ l>
         <img src="https://i.postimg.cc/LsPSt9JS/animais-fantasticos-3.jpg" alt="Filme 13">
         <a href="https://www.max.com/br/pt/movies/animais-fantasticos-os-crimes-de-grindelwald/8c884d7f-cf56-469d-ab2f-38129155757f?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
      
@@ -2171,7 +2169,7 @@ l>
         <img src="https://i.postimg.cc/G2bf4dYq/jack-ca-ador-de-gigantes.jpg" alt="Filme 14">
         <a href="https://www.max.com/br/pt/movies/jack-o-cacador-de-gigantes/10c3ff0c-8e88-4017-b189-30684a38a8f3?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
     
@@ -2196,7 +2194,7 @@ l>
         <img src="https://i.postimg.cc/RZFKV8NK/a-fant-stica-f-brica-de-chocolates.jpg" alt="Filme 16">
         <a href="https://www.max.com/br/pt/movies/fantastica-fabrica-de-chocolate/aad8e3ff-05d9-4325-a1eb-585ee5057ccf?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
 
@@ -2208,7 +2206,7 @@ l>
         <img src="https://i.postimg.cc/Y9wvgyqX/fabrica-2.jpg" alt="Filme 17">
         <a href="https://www.max.com/br/pt/movies/wonka/c34d4c23-39eb-4eb8-95dd-209fa0cb3fb4?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
        
@@ -2383,7 +2381,7 @@ l>
         <img src="https://i.postimg.cc/B6XNRbGL/duna.jpg" alt="Filme 13">
         <a href="https://www.max.com/br/pt/movies/duna/e7dc7b3a-a494-4ef1-8107-f4308aa6bbf7?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
      
@@ -2395,7 +2393,7 @@ l>
         <img src="https://i.postimg.cc/mkWMVgZG/duna-2.jpg" alt="Filme 14">
         <a href="https://www.max.com/br/pt/movies/duna-parte-dois/f0a4f239-0b57-47e2-a39a-54fb96925e61?utm_source=universal_search" target="_blank" class="netflix-button">
           <img src="https://i.postimg.cc/FKQsvTGC/hbo-max-removebg-preview-2.png" alt="Netflix" id="netflix-logo">
-          <span>HBO max</span>
+          <span>HBO</span>
       </a>
       <div class="text">
     
@@ -3014,10 +3012,10 @@ l>
       .carousel {
           position: relative;
           width: 100%;
-          max-width: 1900px;
+         /* max-width: 2000px;*/
           margin: 0 auto;
           overflow: hidden;
-          border-radius: 10px;
+          border-radius: 12px;
       }
       
       .carousel-inner {
@@ -3251,6 +3249,7 @@ main {
       <a href="https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo</a>
       <a href="https://lehhestevess.github.io/leticiaatividades/">Tabela</a>
       <a href="https://lehhestevess.github.io/Lista-de-Tarefas-/">Lista de Tarefas</a>
+      <a href="https://menuverticalleticia.netlify.app/">Menu Vertical</a>
   </div>
   <div class="contact-info">
       <p>Contato: lehhjardim@gmail.com</p>

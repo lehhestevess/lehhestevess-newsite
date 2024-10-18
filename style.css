@@ -1,6 +1,8 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px; 
+  font-weight: bold; 
   padding: 0;
   background-color: black;
   text-align: center;
@@ -30,7 +32,7 @@ body {
   
   .recommendation img {
     width: 100%;
-    border-top-left-radius: 6px;
+    border-top-left-radius: 10px;
     border-top-right-radius: 6%;
     transition: transform 0.3s; 
   }
@@ -107,6 +109,7 @@ body {
   background-size: cover; 
   }
   */
+  
   .banner{
   background-color: #00000000;
   color: #ffffff;
@@ -424,7 +427,7 @@ body {
   
   @media (max-width: 767px) {
     #series, .container {
-        padding:3px;
+        padding:0px;
     }
   }
 
@@ -481,7 +484,7 @@ body {
       }
       
       .image-row img {
-        width: 200px; 
+        width: 220px; 
         margin-right: 10px;
         border-radius: 10px;
         transition: filter 0.3s ease;
@@ -642,7 +645,7 @@ body {
 }
 
 .caption-title {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Georgia', serif;
   font-size: 18px;
   margin: 0 0 5px;
   font-weight: bold;
@@ -652,7 +655,7 @@ body {
 }
 
 .caption-text {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Georgia', serif;
   font-size: 14px;
   line-height: 1.4;
   margin: 0;
@@ -770,11 +773,21 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Wix+Madefor+Display:wght@400..800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  font-size: 24px; 
+  font-weight: bold; 
 }
+
+
+@media (max-width: 768px) {
+  * {
+      font-size: 18px; 
+  }
+}
+
 
 @media screen and (min-width: 768px) {
     .container {
@@ -784,7 +797,7 @@ body {
 
 @media screen and (max-width: 767px) {
     .container {
-        padding: 20px;
+        padding: 10px;
     }
 }
 
@@ -841,6 +854,8 @@ section {
     background: linear-gradient(to right, #000000, #434343); 
     padding: 0; 
     overflow: hidden; 
+    font-size: 24px; /* Ajuste o tamanho conforme necessário */
+    font-weight: bold; /* Negrito */
 }
 
 .home:before {
@@ -1068,7 +1083,10 @@ section {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-size: 24px; 
+font-weight: bold; /* Negrito */
+
   margin: 0;
   padding: 0;
 }
