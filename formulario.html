@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de contato</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
     <nav id="menu" class="menu">
         <ul>
             <li><a href="index.html">Movie Fusion</a></li>
-            <li><a href="inicio.html">Home</a></li>
+            <li><a href="inicio.html">Inicio</a></li>
             <li><a href="#series">Séries</a></li>
             <li><a href="filmes.html">Filmes</a></li>
             <li><a href="filmes.html#terroresuspense">Terror e Suspense</a></li>
@@ -65,116 +66,165 @@
             </form>
         </div>  
     </div>
+
+    <footer class="footer">
+  
+      <div class="contact-info">
+          <p>Contato: lehhjardim@gmail.com</p>
+      </div>
+  </footer>
+
+  <script>
+    const carouselInner = document.querySelector('.carousel-inner');
+const totalSlides = document.querySelectorAll('.carousel-item').length;
+let index = 0;
+
+function showSlide(n) {
+    if (n >= totalSlides) {
+        carouselInner.style.transition = 'none';
+        index = 0;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        setTimeout(() => {
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            showSlide(index + 1);
+        }, 50);
+        return;
+    } else if (n < 0) {
+        carouselInner.style.transition = 'none';
+        index = totalSlides / 2 - 1;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        setTimeout(() => {
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            showSlide(index + 1);
+        }, 50);
+        return;
+    }
+    index = n;
+    carouselInner.style.transform = `translateX(${-index * 100}%)`;
+}
+
+setInterval(() => showSlide(index + 1), 5000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.getElementById('menu-toggle');
+    var menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('open');
+    });
+});
+</script>
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.postimg.cc/GpZHCSbT/glare.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #494949;
+}
+
+form {
+    max-width: 100%;
+}
+
+form h2 {
+    margin-top: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: #ffffff;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.875em;
+    display: none;
+}
+
+button {
+    background-color: #990000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #d53131;
+}
+
+@media (max-width: 600px) {
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
     
+    .container {
+        height: 100vh;
+        padding: 20px;
+    }
+    
+    .form-container {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #494949;
+    }
+}
 
-    <script src="script.js"></script>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://i.postimg.cc/GpZHCSbT/glare.jpg'); 
-            background-size: cover; 
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-
-        .form-container {
-            max-width: 400px;
-            width: 90%;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #494949;
-        }
-
-        form {
-            max-width: 100%;
-        }
-
-        form h2 {
-            margin-top: 0;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #000000;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-
-        input:invalid, textarea:invalid {
-            border-color: #ffffff;
-        }
-
-        .error-message {
-            color: #d9534f;
-            font-size: 0.875em;
-            display: none;
-        }
-
-        button {
-            background-color: #990000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 0;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #d53131;
-        }
-
-        @media (max-width: 600px) {
-            body, html {
-                height: 100%;
-                margin: 0;
-            }
-            
-            .container {
-                height: 100vh;
-                padding: 20px;
-            }
-            
-            .form-container {
-                padding: 20px;
-                border-radius: 10px;
-                background-color: #494949;
-            }
-        }
-        .top-bar {
+.top-bar {
     background-color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
@@ -292,55 +342,8 @@ main {
         margin-top: 30px;
     }
 }
- </style>
 
-<script>
-    const carouselInner = document.querySelector('.carousel-inner');
-    const totalSlides = document.querySelectorAll('.carousel-item').length;
-    let index = 0;
-    
-    function showSlide(n) {
-        if (n >= totalSlides) {
-            carouselInner.style.transition = 'none';
-            index = 0;
-            carouselInner.style.transform = `translateX(${-index * 100}%)`;
-            setTimeout(() => {
-                carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                showSlide(index + 1);
-            }, 50);
-            return;
-        } else if (n < 0) {
-            carouselInner.style.transition = 'none';
-            index = totalSlides / 2 - 1;
-            carouselInner.style.transform = `translateX(${-index * 100}%)`;
-            setTimeout(() => {
-                carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                showSlide(index + 1);
-            }, 50);
-            return;
-        }
-        index = n;
-        carouselInner.style.transform = `translateX(${-index * 100}%)`;
-    }
-    
-    setInterval(() => showSlide(index + 1), 5000);
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        var menuToggle = document.getElementById('menu-toggle');
-        var menu = document.getElementById('menu');
-    
-        menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('open');
-        });
-    });
-    </script>
-
-    <footer class="footer">
-  
-      <div class="contact-info">
-          <p>Contato: lehhjardim@gmail.com</p>
-      </div>
-  </footer>
+</style>
   
 </body>
 </html>

@@ -11,90 +11,6 @@
 </head>
 <body>
 
-    <style>
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-    
-        .logo {
-            font-size: 24px;
-            text-decoration: none;
-            color: #333;
-        }
-    
-        #menuToggle, .mobile-menu-button {
-            display: flex;
-            cursor: pointer;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 30px;
-            height: 24px;
-        }
-    
-        .bar {
-            height: 4px;
-            width: 100%;
-            background-color: #333;
-            transition: all 0.3s ease;
-        }
-    
-        .mobile-menu-button {
-            display: none;
-        }
-    
-        .navigation {
-            display: none;
-        }
-    
-        .navigation.show {
-            display: block;
-        }
-    
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-            }
-    
-            .mobile-menu-button {
-                display: flex;
-            }
-    
-            .navigation {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                z-index: 1000;
-            }
-    
-            .navigation-items {
-                flex-direction: column;
-            }
-    
-            .navigation-items a {
-                padding: 15px;
-            }
-        }
-    
-        .hidden {
-            transform: translateY(-100%);
-        }
-    </style>
-    
-
-</head>
-<body>
-
     <header id="header">
         <a href="#" class="logo">Movie Fusion</a>
         <div class="menu" id="menuToggle">
@@ -110,7 +26,6 @@
         <div class="navigation" id="navigation">
             <div class="close-menu" id="closeMenu">&times;</div>
             <div class="navigation-items">
-              <a href="index.html">HOME</a>
                 <a href="inicio.html">INICIO</a>
                 <a href="filmes.html">FILMES</a>
                 <a href="inicio.html#series">SERIES</a>
@@ -120,51 +35,6 @@
             </div>
         </div>
     </header>
-
-<script>
-    let lastScrollTop = 0;
-    const header = document.getElementById('header');
-
-    window.addEventListener('scroll', function () {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (currentScroll > lastScrollTop) {
-            header.classList.add('hidden'); 
-        } else {
-            header.classList.remove('hidden'); 
-        }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
-    });
-
-    document.getElementById('menuToggle').addEventListener('click', function () {
-        toggleNavigation();
-    });
-
-    document.getElementById('mobileMenuButton').addEventListener('click', function () {
-        toggleNavigation();
-    });
-
-    document.getElementById('closeMenu').addEventListener('click', function () {
-        closeNavigation();
-    });
-
-    function toggleNavigation() {
-        const navigation = document.getElementById('navigation');
-        navigation.classList.toggle('show');
-        const closeMenu = document.getElementById('closeMenu');
-        closeMenu.style.display = navigation.classList.contains('show') ? 'block' : 'none';
-        document.getElementById('menuToggle').style.display = navigation.classList.contains('show') ? 'none' : 'flex';
-    }
-
-    function closeNavigation() {
-        const navigation = document.getElementById('navigation');
-        navigation.classList.remove('show');
-        document.getElementById('closeMenu').style.display = 'none';
-        document.getElementById('menuToggle').style.display = 'flex';
-    }
-</script>
-
 
   <div class="carousel">
     <div class="carousel-inner">
@@ -187,151 +57,8 @@
     </div>
 </div>
 
-
-
-<style>
-  body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-  }
-
-  .munuuujk {
-      background: linear-gradient(135deg, #000000, #2a2a2a 50%, #2a2a2a 50%, #000000);
-      padding: 10px;
-      margin-top: 0;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-      border: 1px solid #000;
-      text-align: center;
-      overflow-x: hidden;
-  }
-
-  .munuuujk ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: nowrap;
-  }
-
-  .munuuujk li {
-      margin: 0;
-  }
-
-  .munuuujk a {
-      color: #e0e0e0;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 8px 16px;
-      border-radius: 12px;
-      transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-  }
-
-  .munuuujk a:hover {
-      background-color: #555555;
-      color: #ffffff;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
-
-  @media (max-width: 600px) {
-      .munuuujk {
-          padding: 8px;
-      }
-      .munuuujk a {
-          font-size: 14px;
-          padding: 6px 12px;
-      }
-  }
-</style>
-
-
 <br>
-          <style>
-             
-              .o-youtube-container {
-                  display: flex;
-                  align-items: center;
-                  position: relative;
-                  width: 100%; 
-                  overflow: hidden; 
-              }
-      
-              .o-youtube {
-                  display: flex;
-                  overflow-x: scroll; 
-                  scroll-snap-type: x mandatory;
-                  gap: 10px;
-                  padding: 0 50px;
-                  scroll-behavior: smooth; 
-                  flex-grow: 1;
-                  -ms-overflow-style: none; 
-                  scrollbar-width: none; 
-              }
-      
-              .o-youtube a {
-                  flex: 0 0 auto;
-              }
-      
-              .o-youtube iframe {
-                  width: 300px;
-                  height: 200px;
-                  border: none;
-                  scroll-snap-align: start;
-              }
-      
-              .o-youtube::-webkit-scrollbar {
-                  display: none; 
-              }
-      
-              .scroll-button {
-                  background: rgba(0, 0, 0, 0.6); 
-                  color: #fff;
-                  border: none;
-                  padding: 10px;
-                  cursor: pointer;
-                  z-index: 1;
-                  border-radius: 50%;
-                  transition: background 0.3s, transform 0.3s; 
-                  position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  width: 40px;
-                  height: 40px; 
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              }
-      
-              .scroll-button:hover {
-                  background: rgba(0, 0, 0, 0.8); 
-                  transform: scale(1.1); 
-      
-              .scroll-left {
-                  left: 10px; 
-              }
-      
-              .scroll-right {
-                  right: 10px; 
-              }
-      
-              .scroll-button svg {
-                  fill: #fff; 
-                  width: 20px; 
-                  height: 20px; 
-              }
-      
-             
-              @media (max-width: 768px) {
-                  .scroll-button {
-                      display: none; 
-                  }
-              }
-          </style>
-
+        
           <hr class="linha-divisao"> 
         
           <h2>Os casos que marcaram a história</h2>
@@ -607,61 +334,206 @@
     </section>
     <br>
   </main>
- 
-    
-  <style>
-    
-    .carousel {
-        position: relative;
-        width: 100%;
-       /* max-width: 2000px;*/
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-    
-    .carousel-inner {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-    
-    .carousel-item {
-        min-width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    @media (max-width: 600px) {
-        .carousel-item img {
-            content: url('https://i.postimg.cc/3RTGHKwJ/netflix-5-documentarios-sobre-crimes-reais-que-voce-precisa-conhecer-capa.jpg'); 
-        }
-        .carousel-item:nth-child(2) img {
-            content: url('https://i.postimg.cc/25pb4zhF/images-3.jpg'); 
-        }
-        .carousel-item:nth-child(3) img {
-            content: url('https://i.postimg.cc/8CDkpsL3/hq720.jpg'); 
-        }
-        .carousel-item:nth-child(4) img {
-            content: url('https://i.postimg.cc/dV93T8Qv/8-melhores-documentarios-netflix-assistir-imdb-reproducao-widelg.jpg');
-        }
-    }
-    
+
+<br> 
+<footer class="footer">
+  <div class="linkcor">
+      <a href="https://lehhestevess.github.io/IntroducaoAoHtml/">Introdução ao HTML</a>
+      <a href="https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo</a>
+      <a href="https://lehhestevess.github.io/leticiaatividades/">Tabela</a>
+      <a href="https://lehhestevess.github.io/Lista-de-Tarefas-/">Lista de Tarefas</a>
+      <a href="https://menuverticalleticia.netlify.app/">Menu Vertical</a>
+  </div>
+  <div class="contact-info">
+      <p>Contato: lehhjardim@gmail.com</p>
+  </div>
+</footer>
+
+<style>
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-image: url(''); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        font-family: Arial, sans-serif;
-        margin: 0px; }
-    
-    .top-bar {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.munuuujk {
+    background: linear-gradient(135deg, #000000, #2a2a2a 50%, #2a2a2a 50%, #000000);
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #000;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.munuuujk ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.munuuujk li {
+    margin: 0;
+}
+
+.munuuujk a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.munuuujk a:hover {
+    background-color: #555555;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+    .munuuujk {
+        padding: 8px;
+    }
+    .munuuujk a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+.o-youtube-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.o-youtube {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 0 50px;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.o-youtube a {
+    flex: 0 0 auto;
+}
+
+.o-youtube iframe {
+    width: 300px;
+    height: 200px;
+    border: none;
+    scroll-snap-align: start;
+}
+
+.o-youtube::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-button {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+.scroll-button svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .scroll-button {
+        display: none;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    /* max-width: 2000px; */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .carousel-item img {
+        content: url('https://i.postimg.cc/3RTGHKwJ/netflix-5-documentarios-sobre-crimes-reais-que-voce-precisa-conhecer-capa.jpg');
+    }
+    .carousel-item:nth-child(2) img {
+        content: url('https://i.postimg.cc/25pb4zhF/images-3.jpg');
+    }
+    .carousel-item:nth-child(3) img {
+        content: url('https://i.postimg.cc/8CDkpsL3/hq720.jpg');
+    }
+    .carousel-item:nth-child(4) img {
+        content: url('https://i.postimg.cc/dV93T8Qv/8-melhores-documentarios-netflix-assistir-imdb-reproducao-widelg.jpg');
+    }
+}
+
+body {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-bar {
     background-color: rgb(0, 0, 0);
     height: 40px;
     width: 100%;
@@ -780,79 +652,184 @@ main {
     }
 }
 
-    </style>
-    
-    <script>
-    let lastScrollTop = 0;
-    const topBar = document.querySelector('.top-bar');
-    
-    window.addEventListener('scroll', function() {
-        let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-        if (currentScrollTop > lastScrollTop) {
-            topBar.classList.add('hidden');
-        } else {
-            topBar.classList.remove('hidden');
-        }
-    
-        lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-    });
-    </script>
-    
-    <script>
-    const carouselInner = document.querySelector('.carousel-inner');
-    const totalSlides = document.querySelectorAll('.carousel-item').length;
-    let index = 0;
-    
-    function showSlide(n) {
-        if (n >= totalSlides) {
-            carouselInner.style.transition = 'none';
-            index = 0;
-            carouselInner.style.transform = `translateX(${-index * 100}%)`;
-            setTimeout(() => {
-                carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                showSlide(index + 1);
-            }, 50);
-            return;
-        } else if (n < 0) {
-            carouselInner.style.transition = 'none';
-            index = totalSlides / 2 - 1;
-            carouselInner.style.transform = `translateX(${-index * 100}%)`;
-            setTimeout(() => {
-                carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                showSlide(index + 1);
-            }, 50);
-            return;
-        }
-        index = n;
-        carouselInner.style.transform = `translateX(${-index * 100}%)`;
-    }
-    
-    setInterval(() => showSlide(index + 1), 5000);
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        var menuToggle = document.getElementById('menu-toggle');
-        var menu = document.getElementById('menu');
-    
-        menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('open');
-        });
-    });
-    </script>
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
 
-<br> 
-<footer class="footer">
-  <div class="linkcor">
-      <a href="https://lehhestevess.github.io/IntroducaoAoHtml/">Introdução ao HTML</a>
-      <a href="https://lehhestevess.github.io/LayoutResponsivo/">Layout Responsivo</a>
-      <a href="https://lehhestevess.github.io/leticiaatividades/">Tabela</a>
-      <a href="https://lehhestevess.github.io/Lista-de-Tarefas-/">Lista de Tarefas</a>
-      <a href="https://menuverticalleticia.netlify.app/">Menu Vertical</a>
-  </div>
-  <div class="contact-info">
-      <p>Contato: lehhjardim@gmail.com</p>
-  </div>
-</footer>
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+#menuToggle,
+.mobile-menu-button {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+    }
+
+    .navigation-items {
+        flex-direction: column;
+    }
+
+    .navigation-items a {
+        padding: 15px;
+    }
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+</style>
+
+<script>
+    let lastScrollTop = 0;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        header.classList.add('hidden');
+    } else {
+        header.classList.remove('hidden');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+document.getElementById('menuToggle').addEventListener('click', function () {
+    toggleNavigation();
+});
+
+document.getElementById('mobileMenuButton').addEventListener('click', function () {
+    toggleNavigation();
+});
+
+document.getElementById('closeMenu').addEventListener('click', function () {
+    closeNavigation();
+});
+
+function toggleNavigation() {
+    const navigation = document.getElementById('navigation');
+    navigation.classList.toggle('show');
+    const closeMenu = document.getElementById('closeMenu');
+    closeMenu.style.display = navigation.classList.contains('show') ? 'block' : 'none';
+    document.getElementById('menuToggle').style.display = navigation.classList.contains('show') ? 'none' : 'flex';
+}
+
+function closeNavigation() {
+    const navigation = document.getElementById('navigation');
+    navigation.classList.remove('show');
+    document.getElementById('closeMenu').style.display = 'none';
+    document.getElementById('menuToggle').style.display = 'flex';
+}
+
+let lastScrollTop2 = 0;
+const topBar = document.querySelector('.top-bar');
+
+window.addEventListener('scroll', function() {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop2) {
+        topBar.classList.add('hidden');
+    } else {
+        topBar.classList.remove('hidden');
+    }
+
+    lastScrollTop2 = currentScrollTop <= 0 ? 0 : currentScrollTop;
+});
+
+const carouselInner = document.querySelector('.carousel-inner');
+const totalSlides = document.querySelectorAll('.carousel-item').length;
+let index = 0;
+
+function showSlide(n) {
+    if (n >= totalSlides) {
+        carouselInner.style.transition = 'none';
+        index = 0;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        setTimeout(() => {
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            showSlide(index + 1);
+        }, 50);
+        return;
+    } else if (n < 0) {
+        carouselInner.style.transition = 'none';
+        index = totalSlides / 2 - 1;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        setTimeout(() => {
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            showSlide(index + 1);
+        }, 50);
+        return;
+    }
+    index = n;
+    carouselInner.style.transform = `translateX(${-index * 100}%)`;
+}
+
+setInterval(() => showSlide(index + 1), 5000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('open');
+    });
+});
+
+</script>
 
   </body>
   </html>

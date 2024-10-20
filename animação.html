@@ -51,146 +51,6 @@
     
       <div class="degrade"></div>
     
-      <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-    
-        .munuuujk {
-            background: linear-gradient(135deg, #000000, #2a2a2a 50%, #2a2a2a 50%, #000000);
-            padding: 10px;
-            margin-top: 0;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-            border: 1px solid #000;
-            text-align: center;
-            overflow-x: hidden;
-        }
-    
-        .munuuujk ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: nowrap;
-        }
-    
-        .munuuujk li {
-            margin: 0;
-        }
-    
-        .munuuujk a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 12px;
-            transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-        }
-    
-        .munuuujk a:hover {
-            background-color: #555555;
-            color: #ffffff;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        }
-    
-        @media (max-width: 600px) {
-            .munuuujk {
-                padding: 8px;
-            }
-            .munuuujk a {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-      </style>
-    
-    <style>
-      #header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          transition: all 0.3s ease;
-          z-index: 1000;
-      }
-  
-      .logo {
-          font-size: 24px;
-          text-decoration: none;
-          color: #333;
-      }
-  
-      #menuToggle, .mobile-menu-button {
-          display: flex;
-          cursor: pointer;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 30px;
-          height: 24px;
-      }
-  
-      .bar {
-          height: 4px;
-          width: 100%;
-          background-color: #333;
-          transition: all 0.3s ease;
-      }
-  
-      .mobile-menu-button {
-          display: none;
-      }
-  
-      .navigation {
-          display: none;
-      }
-  
-      .navigation.show {
-          display: block;
-      }
-  
-      @media (max-width: 768px) {
-          .menu {
-              display: none;
-          }
-  
-          .mobile-menu-button {
-              display: flex;
-          }
-  
-          .navigation {
-              position: absolute;
-              top: 100%;
-              left: 0;
-              width: 100%;
-              background: white;
-              z-index: 1000;
-          }
-  
-          .navigation-items {
-              flex-direction: column;
-          }
-  
-          .navigation-items a {
-              padding: 15px;
-          }
-      }
-  
-      .hidden {
-          transform: translateY(-100%);
-      }
-  </style>
-  
-
     </head>
     <body>
     
@@ -209,7 +69,6 @@
         <div class="navigation" id="navigation">
             <div class="close-menu" id="closeMenu">&times;</div>
             <div class="navigation-items">
-              <a href="index.html">HOME</a>
                 <a href="inicio.html">INICIO</a>
                 <a href="filmes.html">FILMES</a>
                 <a href="inicio.html#series">SERIES</a>
@@ -219,271 +78,6 @@
             </div>
         </div>
     </header>
-    
-    <script>
-    let lastScrollTop = 0;
-    const header = document.getElementById('header');
-    
-    window.addEventListener('scroll', function () {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-      if (currentScroll > lastScrollTop) {
-          header.classList.add('hidden'); 
-      } else {
-          header.classList.remove('hidden'); 
-      }
-    
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
-    });
-    
-    document.getElementById('menuToggle').addEventListener('click', function () {
-      toggleNavigation();
-    });
-    
-    document.getElementById('mobileMenuButton').addEventListener('click', function () {
-      toggleNavigation();
-    });
-    
-    document.getElementById('closeMenu').addEventListener('click', function () {
-      closeNavigation();
-    });
-    
-    function toggleNavigation() {
-      const navigation = document.getElementById('navigation');
-      navigation.classList.toggle('show');
-      const closeMenu = document.getElementById('closeMenu');
-      closeMenu.style.display = navigation.classList.contains('show') ? 'block' : 'none';
-      document.getElementById('menuToggle').style.display = navigation.classList.contains('show') ? 'none' : 'flex';
-    }
-    
-    function closeNavigation() {
-      const navigation = document.getElementById('navigation');
-      navigation.classList.remove('show');
-      document.getElementById('closeMenu').style.display = 'none';
-      document.getElementById('menuToggle').style.display = 'flex';
-    }
-    </script>
-    
-          <style>
-          
-        body {
-            font-family: Arial, sans-serif;
-            padding: 0;
-            background-color: rgb(0, 0, 0);
-            text-align: center;
-            background-image: url(''); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            font-family: Arial, sans-serif;
-            margin: 0px; 
-        }
-    
-    
-        .carousel {
-            position: relative;
-            width: 100%;
-          /* max-width: 2000px;*/
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-    
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-    
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-    
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    
-    
-        .top-bar {
-            background-color: rgb(0, 0, 0);
-            height: 40px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-            box-sizing: border-box;
-            transition: transform 0.3s ease;
-        }
-    
-        .top-bar-content {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-        }
-    
-        .top-bar-image {
-            height: 90px;
-            margin-right: 10px;
-        }
-    
-        .top-bar-text {
-            font-size: 16px;
-            color: white;
-        }
-    
-        .top-bar.hidden {
-            transform: translateY(-100%);
-        }
-    
-        .menu-icon {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 25px;
-            height: 15px;
-            cursor: pointer;
-            position: absolute;
-            right: 15px;
-        }
-    
-        .bar {
-            width: 100%;
-            height: 3px;
-            background-color: white;
-            border-radius: 2px;
-        }
-    
-        .menu {
-            position: fixed;
-            top: 40px;
-            right: -180px;
-            width: 180px;
-            height: auto;
-            max-height: 90%;
-            background-color: white;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-            transition: right 0.3s ease;
-            overflow-y: auto;
-            padding: 10px;
-            z-index: 999;
-            box-sizing: border-box;
-        }
-    
-        .menu.open {
-            right: 0;
-        }
-    
-        .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-    
-        .menu ul li {
-            padding: 8px 0;
-        }
-    
-        .menu ul li a {
-            text-decoration: none;
-            color: black;
-            display: block;
-            padding: 6px;
-            border-radius: 4px;
-        }
-    
-        .menu ul li a:hover {
-            background-color: #f0f0f0;
-        }
-    
-        main {
-            margin-top: 40px;
-        }
-    
-    
-        @media (max-width: 600px) {
-            body {
-                background-image: url('');
-            }
-            .carousel-item img {
-                content: url('https://i.postimg.cc/g0TFTJ4P/nlnbbb.jpg'); 
-            }
-            .carousel-item:nth-child(2) img {
-                content: url('https://i.postimg.cc/pdjxJ9Zj/download-12.jpg'); 
-            }
-            .carousel-item:nth-child(3) img {
-                content: url('https://i.postimg.cc/R0QvkRCv/download-15.jpg'); 
-            }
-          
-        }
-    
-            </style>
-            
-            <script>
-            let lastScrollTop = 0;
-            const topBar = document.querySelector('.top-bar');
-            
-            window.addEventListener('scroll', function() {
-                let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-                if (currentScrollTop > lastScrollTop) {
-                    topBar.classList.add('hidden');
-                } else {
-                    topBar.classList.remove('hidden');
-                }
-            
-                lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-            });
-            </script>
-            
-            <script>
-            const carouselInner = document.querySelector('.carousel-inner');
-            const totalSlides = document.querySelectorAll('.carousel-item').length;
-            let index = 0;
-            
-            function showSlide(n) {
-                if (n >= totalSlides) {
-                    carouselInner.style.transition = 'none';
-                    index = 0;
-                    carouselInner.style.transform = `translateX(${-index * 100}%)`;
-                    setTimeout(() => {
-                        carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                        showSlide(index + 1);
-                    }, 50);
-                    return;
-                } else if (n < 0) {
-                    carouselInner.style.transition = 'none';
-                    index = totalSlides / 2 - 1;
-                    carouselInner.style.transform = `translateX(${-index * 100}%)`;
-                    setTimeout(() => {
-                        carouselInner.style.transition = 'transform 0.5s ease-in-out';
-                        showSlide(index + 1);
-                    }, 50);
-                    return;
-                }
-                index = n;
-                carouselInner.style.transform = `translateX(${-index * 100}%)`;
-            }
-            
-            setInterval(() => showSlide(index + 1), 5000);
-            
-            document.addEventListener('DOMContentLoaded', function() {
-                var menuToggle = document.getElementById('menu-toggle');
-                var menu = document.getElementById('menu');
-            
-                menuToggle.addEventListener('click', function() {
-                    menu.classList.toggle('open');
-                });
-            });
-            </script>
-            
-
-
 
   <!--
       <nav>
@@ -494,7 +88,6 @@
         </nav>
   -->
         
-  <hr class="linha-divisao">
         <main>
       
           
@@ -502,6 +95,7 @@
             <h1>Animes filmes</h1>
           <br>
 
+          <hr class="linha-divisao">
             <div class="image-row">
 
               <div class="image-container">
@@ -960,6 +554,7 @@
       </section>
     </main>
 
+    <br><br>
     <h1>Favoritos</h1>
     <hr class="linha-divisao">
     <div class="image-row">
@@ -1027,11 +622,10 @@
       </div>
     </div>
     
-    <hr class="linha-divisao">
-    <br>  
+    <br><br><br><br>
 
     <h1>Mais animações</h1>
-
+    <hr class="linha-divisao">
     <section id="animes">
       <div class="container">
 
@@ -1499,9 +1093,11 @@
       <img src="https://i.postimg.cc/SjFDy47q/seriesss-removebg-preview.png" alt="Série 13">
     </div>
   </div>
+
     <hr class="linha-divisao">
-    <br>
+    <br><br><br>
     <h1>Animes</h1>
+    
 
     <br>
     <div class="image-row">
@@ -1659,9 +1255,9 @@
     </div>
     
 
-  </br>
+  </br><br><br><br><br><br>
+    <h1>Séries Desenhos</h1>
     <hr class="linha-divisao">
-    <h1>Séries Animadas</h1>
     <section id="animes">
       <div class="container">
         <div class="recommendation">
@@ -2050,6 +1646,386 @@
     </div>
 </footer>
 
-        
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    /* max-width: 2000px; */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-bar {
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.top-bar-image {
+    height: 90px;
+    margin-right: 10px;
+}
+
+.top-bar-text {
+    font-size: 16px;
+    color: white;
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%);
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.menu {
+    position: fixed;
+    top: 40px;
+    right: -180px;
+    width: 180px;
+    height: auto;
+    max-height: 90%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 10px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.menu.open {
+    right: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 8px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url('');
+    }
+    .carousel-item img {
+        content: url('https://i.postimg.cc/g0TFTJ4P/nlnbbb.jpg');
+    }
+    .carousel-item:nth-child(2) img {
+        content: url('https://i.postimg.cc/pdjxJ9Zj/download-12.jpg');
+    }
+    .carousel-item:nth-child(3) img {
+        content: url('https://i.postimg.cc/R0QvkRCv/download-15.jpg');
+    }
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+#menuToggle,
+.mobile-menu-button {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+    }
+
+    .navigation-items {
+        flex-direction: column;
+    }
+
+    .navigation-items a {
+        padding: 15px;
+    }
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.munuuujk {
+    background: linear-gradient(135deg, #000000, #2a2a2a 50%, #2a2a2a 50%, #000000);
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #000;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.munuuujk ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+.munuuujk li {
+    margin: 0;
+}
+
+.munuuujk a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.munuuujk a:hover {
+    background-color: #555555;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+    .munuuujk {
+        padding: 8px;
+    }
+    .munuuujk a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+</style>
+
+<script>
+  const carouselInner = document.querySelector('.carousel-inner');
+const totalSlides = document.querySelectorAll('.carousel-item').length;
+let index = 0;
+
+function showSlide(n) {
+    if (n >= totalSlides) {
+        carouselInner.style.transition = 'none';
+        index = 0;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        setTimeout(() => {
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            showSlide(index + 1);
+        }, 50);
+        return;
+    } else if (n < 0) {
+        carouselInner.style.transition = 'none';
+        index = totalSlides / 2 - 1;
+        carouselInner.style.transform = `translateX(${-index * 100}%)`;
+        setTimeout(() => {
+            carouselInner.style.transition = 'transform 0.5s ease-in-out';
+            showSlide(index + 1);
+        }, 50);
+        return;
+    }
+    index = n;
+    carouselInner.style.transform = `translateX(${-index * 100}%)`;
+}
+
+setInterval(() => showSlide(index + 1), 5000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('open');
+    });
+});
+
+let lastScrollTop = 0;
+const topBar = document.querySelector('.top-bar');
+
+window.addEventListener('scroll', function() {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+        topBar.classList.add('hidden');
+    } else {
+        topBar.classList.remove('hidden');
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+});
+
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        header.classList.add('hidden');
+    } else {
+        header.classList.remove('hidden');
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+document.getElementById('menuToggle').addEventListener('click', function() {
+    toggleNavigation();
+});
+
+document.getElementById('mobileMenuButton').addEventListener('click', function() {
+    toggleNavigation();
+});
+
+document.getElementById('closeMenu').addEventListener('click', function() {
+    closeNavigation();
+});
+
+function toggleNavigation() {
+    const navigation = document.getElementById('navigation');
+    navigation.classList.toggle('show');
+    const closeMenu = document.getElementById('closeMenu');
+    closeMenu.style.display = navigation.classList.contains('show') ? 'block' : 'none';
+    document.getElementById('menuToggle').style.display = navigation.classList.contains('show') ? 'none' : 'flex';
+}
+
+function closeNavigation() {
+    const navigation = document.getElementById('navigation');
+    navigation.classList.remove('show');
+    document.getElementById('closeMenu').style.display = 'none';
+    document.getElementById('menuToggle').style.display = 'flex';
+}
+</script>
+
   </body>
   </html>
