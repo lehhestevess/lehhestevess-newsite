@@ -55,10 +55,10 @@ nav a {
   font-size: 14px;
 }
 
-/* Para telas maiores, como computadores desktop */
-@media (min-width: 1280px) {
+/* Para telas de computadores desktop grandes (acima de 1440px) */
+@media (min-width: 1440px) {
   .recommendation {
-    width: calc(12.666% - 20px); /* Reduzir largura */
+    width: calc(12.666% - 20px); /* Reduzir largura para desktops grandes */
     font-size: 12px; /* Ajustar tamanho da fonte se necessário */
   }
 }
