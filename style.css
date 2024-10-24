@@ -58,7 +58,7 @@ nav a {
 /* Para telas maiores, como computadores desktop */
 @media (min-width: 1280px) {
   .recommendation {
-    width: calc(12.666% - 25px); /* Reduzir largura */
+    width: calc(12.666% - 20px); /* Reduzir largura */
     font-size: 12px; /* Ajustar tamanho da fonte se necessário */
   }
 }
